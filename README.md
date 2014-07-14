@@ -22,6 +22,7 @@ If there's a single size, that's the width meaning height doesn't matter
 - Post Image - 886 full, 426 single column
 
 ### LinkedIn
+- Profile Background - 1400 x 425
 - Cover Image - 646 x 220
 - Company Logo - 100 x 60
 - Square Logo - 50 x 50
