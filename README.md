@@ -41,5 +41,5 @@ It's just a pain to go searching for this information to update company, persona
 #### References
 - https://support.twitter.com/articles/127871-customizing-your-profile
 - https://www.facebook.com/help/492441920771107/
-- https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content
+- https://developers.facebook.com/docs/sharing/best-practices
 - https://support.google.com/plus/answer/1057172?hl=en
