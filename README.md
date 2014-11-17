@@ -14,7 +14,7 @@ If there's a single size, that's the width meaning height doesn't matter
 - Cover Photo - 851 x 315
 - Profile Photo - 300 x 300, displays as 160 x 160
 - App Icon - 111 x 74
-- Post Image - 1200 x 600, minimum 600 x 315
+- Post Image - 1200 x 630, minimum 600 x 315 [(source)](https://developers.facebook.com/docs/sharing/best-practices#images)
 
 ### Google+
 - Cover Photo - 2120 x 1192
