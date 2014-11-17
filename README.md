@@ -17,7 +17,7 @@ If there's a single size, that's the width meaning height doesn't matter
 - Post Image - 1200 x 630, minimum 600 x 315 [(source)](https://developers.facebook.com/docs/sharing/best-practices#images)
 
 ### Google+
-- Cover Photo - 2120 x 1192
+- Cover Photo - 2120 x 1192 (1080 x 608 min)
 - Profile Photo - 250 x 250
 - Post Image - 886 full, 426 single column
 
