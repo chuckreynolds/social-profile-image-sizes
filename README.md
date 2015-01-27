@@ -1,10 +1,8 @@
-##Social media profile image & post image size reference guide
+#Social Media Image Sizes Reference Guide
+
+An always up-to-date quick reference guide to Social Media Image Sizes for proper profile building, image and link sharing, and new posts.
 
 ![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
-
-All sizes in pixels (px).
-Note that the square images all differ but using a single larger photo will be fine.
-If there's a single size, that's the width meaning height doesn't matter
 
 
 ### Twitter
@@ -46,8 +44,12 @@ If there's a single size, that's the width meaning height doesn't matter
 
 
 #### Why this guide?
-It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. Pull requests open. Or issues. Cheers
-*PS - most profile photos are square - It's best to just have a 600x600ish image that you can use for all the square profile photos.*
+It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Requests](https://github.com/chuckreynolds/social-profile-image-sizes/pulls) and [Issues](https://github.com/chuckreynolds/social-profile-image-sizes/issues) are open!** Cheers
+**Notes:**
+-Most profile photos are square - It's best to just have a 600x600ish image that you can use for all the square profile photos
+-All sizes here are in pixels (px)
+-If there's a single size listed here, that's the width meaning height doesn't matter in that case
+
 
 #### References
 - https://support.twitter.com/articles/127871-customizing-your-profile
