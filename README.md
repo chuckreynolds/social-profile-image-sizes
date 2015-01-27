@@ -19,17 +19,19 @@ If there's a single size, that's the width meaning height doesn't matter
 ### Google+
 - Cover Photo - 2120 x 1192 (1080 x 608 min)
 - Profile Photo - 250 x 250
-- Post Image - 886 full, 426 single column. (height is scaled for you)
+- Post Image - 886 full, 497 single column. (height is scaled for you)
 
 ### LinkedIn
 - Profile Background - 1400 x 425
-- Cover Image - 646 x 220
+- Banner Image - 646 x 220
 - Company Logo - 100 x 60
+- Company Hero - 974 x 330 minimum
 - Square Logo - 50 x 50
 - Profile Photo - 200 x 200
 
 ### Youtube
 - Cover Photo - 2560 x 1440
+- Video Thumbnail - 1280 x 720 (that's HD yo)
 
 ### Pinterest
 - Post Image - 236 feed, 736 single
@@ -50,4 +52,5 @@ It's just a pain to go searching for this information to update company, persona
 - https://www.facebook.com/help/492441920771107/
 - https://developers.facebook.com/docs/sharing/best-practices
 - https://support.google.com/plus/answer/1057172?hl=en
+- https://help.linkedin.com/app/answers/detail/a_id/45902/ft/eng
 - https://www.tumblr.com/docs/en/photo_troubleshooting
