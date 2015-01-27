@@ -1,5 +1,7 @@
 ##Social media profile image & post image size reference guide
 
+![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
+
 All sizes in pixels (px).
 Note that the square images all differ but using a single larger photo will be fine.
 If there's a single size, that's the width meaning height doesn't matter
