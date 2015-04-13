@@ -44,7 +44,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Post Image - 1280 x 1920 (500 x 750 min before scaling)
 
 ### Medium Profile and Post Cover image dimensions
-* Profile & Post Cover - 1400 x 1120 (1200 x 960 min)
+* Profile & Post Cover - 1500 x 1200
 
 
 ## Why this guide?
@@ -65,4 +65,5 @@ It's just a pain to go searching for this information to update company, persona
 * https://help.linkedin.com/app/answers/detail/a_id/45902/ft/eng
 * https://www.tumblr.com/docs/en/photo_troubleshooting
 * https://medium.com/help-center/images-652ee60abea6
+ * https://twitter.com/Medium/status/587718302765416448
 * https://business.pinterest.com/sites/business/files/how-to-make-great-pins-guide-en-01.pdf
