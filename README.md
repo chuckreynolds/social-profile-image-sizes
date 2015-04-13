@@ -42,6 +42,9 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ### Tumblr Image Dimensions
 * Post Image - 1280 x 1920, 500 x 750 min before scaling
 
+### Medium Profile and Post Cover image dimensions
+* Profile & Post Cover - 1400 x 1120 (1200 x 960 min)
+
 
 ## Why this guide?
 It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Requests](https://github.com/chuckreynolds/social-profile-image-sizes/pulls) and [Issues](https://github.com/chuckreynolds/social-profile-image-sizes/issues) are open!** Cheers
@@ -60,3 +63,4 @@ It's just a pain to go searching for this information to update company, persona
 * https://support.google.com/plus/answer/1057172?hl=en
 * https://help.linkedin.com/app/answers/detail/a_id/45902/ft/eng
 * https://www.tumblr.com/docs/en/photo_troubleshooting
+* https://medium.com/help-center/images-652ee60abea6
