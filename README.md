@@ -35,7 +35,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ### Pinterest Image Dimensions
 * Post Image - 2:3 or 1:3.5 ratio & 600 min (displays as 216 board, 236 feed, 736 single)
- * *pinterest is completely dependant upon image ratio. 2:3 (ex: 600 x 900) or 1:3.5 (ex: 900 x 2100)*
+ * *pinterest is dependant upon image ratio. 2:3 (ex: 600 x 900) or 1:3.5 (ex: 900 x 2100)*
 
 ### Instagram Image Dimensions
 * Everything is square (display at 640)
