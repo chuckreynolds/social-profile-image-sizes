@@ -12,35 +12,35 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ## Facebook Image Dimensions
 * Cover Photo - 851 x 315
-* Profile Photo - 300 x 300, displays as 160 x 160
+* Profile Photo - 300 x 300 (displays as 160 x 160)
+* Post Link Image - 1200 x 630 (600 x 315 min)
 * App Icon - 111 x 74
-* Post Link Image - 1200 x 630, minimum 600 x 315
 
 ### Google Plus Image Dimensions
 * Cover Photo - 2120 x 1192 (1080 x 608 min)
 * Profile Photo - 250 x 250
-* Post Image - 886 full, 497 single column. (height is scaled for you)
+* Post Image - 886 full, 497 single column (height is scaled for you)
 
 ### LinkedIn Image Dimensions
 * Profile Background - 1400 x 425
-* Banner Image - 646 x 220
-* Company Logo - 100 x 60
-* Company Hero - 974 x 330 minimum
-* Square Logo - 50 x 50
 * Profile Photo - 200 x 200
+* Company Banner - 646 x 220 min
+* Company Logo - 100 x 60
+* Company Hero - 974 x 330 min
+* Company Square Logo - 50 x 50
 
 ### Youtube Image Dimensions
 * Cover Photo - 2560 x 1440
 * Video Thumbnail - 1280 x 720 (that's HD yo)
 
 ### Pinterest Image Dimensions
-* Post Image - 236 feed, 736 single
+* Post Image - 600 (displays as 236 feed, 736 single)
 
 ### Instagram Image Dimensions
-* Everything is square. Photos display at 640
+* Everything is square (display at 640)
 
 ### Tumblr Image Dimensions
-* Post Image - 1280 x 1920, 500 x 750 min before scaling
+* Post Image - 1280 x 1920 (500 x 750 min before scaling)
 
 ### Medium Profile and Post Cover image dimensions
 * Profile & Post Cover - 1400 x 1120 (1200 x 960 min)
