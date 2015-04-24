@@ -46,6 +46,12 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ### Medium Profile and Post Cover image dimensions
 * Profile & Post Cover - 1500 x 1200
 
+### WordPress Plugin & Theme Dev
+* Theme Screenshot Size - 880 x 660
+* Plugin Icon Sizes - 256 x 256, and 128 x 128
+* Plugin Header Sizes - 1544 x 500, and 772 x 250
+*(general info here: theme screenshot.(png/jpg) goes into theme root. plugin images go into an /assets/ directory as such: banner-1544x500.png, banner-772x250.png, icon-128x128.png, icon-256x256.png)*
+
 
 ## Why this guide?
 It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Requests](https://github.com/chuckreynolds/social-profile-image-sizes/pulls) and [Issues](https://github.com/chuckreynolds/social-profile-image-sizes/issues) are open!** Cheers
@@ -67,3 +73,6 @@ It's just a pain to go searching for this information to update company, persona
 * https://medium.com/help-center/images-652ee60abea6
  * https://twitter.com/Medium/status/587718302765416448
 * https://business.pinterest.com/sites/business/files/how-to-make-great-pins-guide-en-01.pdf
+* https://codex.wordpress.org/Theme_Development#Screenshot
+* https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
+
