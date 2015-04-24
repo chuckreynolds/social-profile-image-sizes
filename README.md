@@ -50,7 +50,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Theme Screenshot Size - 880 x 660
 * Plugin Icon Sizes - 256 x 256, and 128 x 128
 * Plugin Header Sizes - 1544 x 500, and 772 x 250
-*(general info here: theme screenshot.(png/jpg) goes into theme root. plugin images go into an /assets/ directory as such: banner-1544x500.png, banner-772x250.png, icon-128x128.png, icon-256x256.png)*
+* *(general info here: theme screenshot.(png/jpg) goes into theme root. plugin images go into an /assets/ directory as such: banner-1544x500.png, banner-772x250.png, icon-128x128.png, icon-256x256.png)*
 
 
 ## Why this guide?
