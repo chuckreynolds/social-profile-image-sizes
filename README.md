@@ -47,6 +47,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile & Post Cover - 1500 x 1200
 
 ### WordPress Plugin & Theme Dev
+* Site Icon (Customizer -> Site Identity -> Site Icon) - 512 x 512
 * Theme Screenshot Size - 880 x 660
 * Plugin Icon Sizes - 256 x 256, and 128 x 128
 * Plugin Header Sizes - 1544 x 500, and 772 x 250
