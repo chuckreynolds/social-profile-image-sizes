@@ -38,7 +38,8 @@ This is an always up-to-date quick reference guide to social media image sizes f
  * *pinterest is dependant upon image ratio. 2:3 (ex: 600 x 900) or 1:3.5 (ex: 900 x 2100)*
 
 ### Instagram Image Dimensions
-* Everything is square (display at 640)
+* Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
+ *  *If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook.
 
 ### Tumblr Image Dimensions
 * Post Image - 1280 x 1920 (500 x 750 min before scaling)
