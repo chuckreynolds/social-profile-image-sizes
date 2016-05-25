@@ -54,6 +54,10 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Plugin Header Sizes - 1544 x 500, and 772 x 250
 * *(general info here: theme screenshot.(png/jpg) goes into theme root. plugin images go into an /assets/ directory as such: banner-1544x500.png, banner-772x250.png, icon-128x128.png, icon-256x256.png)*
 
+### Twitch.tv Channel Design
+* Video Offline Banner - 1920 x 1080
+* Panel Images - 320 (no height required but common is 100)
+
 ### SoundCloud
 * Profile & Tracks - 1400 x 1400 (800 x 800 min)
 
