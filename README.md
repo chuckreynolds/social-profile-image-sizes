@@ -41,11 +41,14 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ### Instagram Image Dimensions
 * Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
  *  *If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook.
+ 
+### Github Profile Dimensions
+* Profile (Identicon) Picture - 500 x 500
 
 ### Tumblr Image Dimensions
 * Post Image - 1280 x 1920 (500 x 750 min before scaling)
 
-### Medium Profile and Post Cover image dimensions
+### Medium Profile and Post Cover Image Dimensions
 * Profile & Post Cover - 1500 x 1200
 
 ### WordPress Plugin & Theme Dev
@@ -86,4 +89,5 @@ It's just a pain to go searching for this information to update company, persona
 * https://business.pinterest.com/sites/business/files/how-to-make-great-pins-guide-en-01.pdf
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
+* https://help.github.com/articles/setting-your-profile-picture/
 
