@@ -23,7 +23,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Post Image - 886 full, 497 single column (height is scaled for you)
 
 ### LinkedIn Image Dimensions
-* Profile Background - 1400 x 425
+* Profile Background - 1536 x 768
 * Profile Photo - 200 x 200
 * Company Banner - 646 x 220 min
 * Company Logo - 100 x 60
@@ -82,12 +82,10 @@ It's just a pain to go searching for this information to update company, persona
 * https://www.facebook.com/help/388305657884730/ (fb profile and cover photo)
 * https://developers.facebook.com/docs/sharing/best-practices#images (fb sharing images)
 * https://support.google.com/plus/answer/1057172?hl=en
-* https://help.linkedin.com/app/answers/detail/a_id/45902/ft/eng
-* https://www.tumblr.com/docs/en/photo_troubleshooting
-* https://medium.com/help-center/images-652ee60abea6
- * https://twitter.com/Medium/status/587718302765416448
+* https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
+* https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
+* https://twitter.com/Medium/status/587718302765416448
 * https://business.pinterest.com/sites/business/files/how-to-make-great-pins-guide-en-01.pdf
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
-
