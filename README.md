@@ -40,6 +40,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Video Thumbnail - 1280 x 720 (that's HD yo)
 
 ### Pinterest Image Dimensions
+* Profile - 400 x 400 (any square, displays as 168 circle)
 * Post Image - 2:3 or 1:3.5 ratio & 600 min (displays as 216 board, 236 feed, 736 single)
  * *pinterest is dependant upon image ratio. 2:3 (ex: 600 x 900) or 1:3.5 (ex: 900 x 2100)*
 
