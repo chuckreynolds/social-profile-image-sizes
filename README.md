@@ -25,10 +25,15 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ### LinkedIn Image Dimensions
 * Profile Background - 1536 x 768
 * Profile Photo - 200 x 200
-* Company Banner - 646 x 220 min
-* Company Logo - 100 x 60
-* Company Hero - 974 x 330 min
-* Company Square Logo - 50 x 50
+
+  **Linkedin Company / Career pages**
+  * Overview Tab, Logo Image - 300 x 300
+  * Overview Tab, Overview Tab Image - 360 x 120
+  * Overview Tab, Cover Image - 1536 x 768
+  * Life Tab, Hero Image - 1128 x 376
+  * Life Tab, Custom Modules - 502 x 282
+  * Life Tab, Company Photos - 900 x 600
+  * Company Updates Posts - 1200 x 627
 
 ### Youtube Image Dimensions
 * Cover Photo - 2560 x 1440
@@ -41,7 +46,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ### Instagram Image Dimensions
 * Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
  *  *If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook.
- 
+
 ### Github Profile Dimensions
 * Profile (Identicon) Picture - 500 x 500
 
