@@ -41,8 +41,10 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ### Pinterest Image Dimensions
 * Profile - 400 x 400 (any square, displays as 168 circle)
-* Post Image - 2:3 or 1:3.5 ratio & 600 min (displays as 216 board, 236 feed, 736 single)
- * *pinterest is dependant upon image ratio. 2:3 (ex: 600 x 900) or 1:3.5 (ex: 900 x 2100)*
+* Post Image - 600 x 900 (2:3 ratio, up to 1560 tall max before gets cut off)
+  * _(description copy - 400 char max)_
+* Article / Shop Cover - 756 x 377
+* Board Cover - 377 x 377
 
 ### Instagram Image Dimensions
 * Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
@@ -91,7 +93,7 @@ It's just a pain to go searching for this information to update company, persona
 * https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
 * https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
 * https://twitter.com/Medium/status/587718302765416448
-* https://business.pinterest.com/sites/business/files/how-to-make-great-pins-guide-en-01.pdf
+* https://business.pinterest.com/en/make-great-pins (also was sent a pptx from pinterest biz)
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
