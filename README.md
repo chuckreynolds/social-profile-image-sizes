@@ -87,7 +87,7 @@ It's just a pain to go searching for this information to update company, persona
 
 
 #### References
-* https://support.twitter.com/articles/127871-customizing-your-profile
+* https://support.twitter.com/articles/127871
 * https://www.facebook.com/help/266520536764594/ (fb cover photo)
 * https://www.facebook.com/help/492441920771107/ (fb profile pic)
 * https://www.facebook.com/help/388305657884730/ (fb profile and cover photo)
