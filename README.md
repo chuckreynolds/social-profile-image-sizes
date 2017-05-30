@@ -67,7 +67,10 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * *(general info here: theme screenshot.(png/jpg) goes into theme root. plugin images go into an /assets/ directory as such: banner-1544x500.png, banner-772x250.png, icon-128x128.png, icon-256x256.png)*
 
 ### Twitch.tv Channel Design
-* Video Offline Banner - 1920 x 1080
+* Profile Banner - 1200 x 380 (<3Mb)
+* Video Offline Banner - 1920 x 1080 (or 1280 x 720, just 16x9 ratio)
+* Subscriber Emoticons - 28 x 28, 56 x 56, and 112 x 112 (png, 25kb or less each)
+* Subscriber Badges - 18 x 18, 36 x 36, and 72 x 72 ( 25kb or less each)
 * Panel Images - 320 (no height required but common is 100)
 
 ### SoundCloud
@@ -97,3 +100,4 @@ It's just a pain to go searching for this information to update company, persona
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
+* Twitch: [sub badges](https://help.twitch.tv/customer/en/portal/articles/2579670-subscriber-badge-guide), [sub emotes](https://help.twitch.tv/customer/en/portal/articles/2348985-partner-emoticon-and-badge-guide)
