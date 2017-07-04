@@ -9,6 +9,8 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Header Image - 1500 x 500
 * Profile Photo - 400 x 400
 * Post Image - 1024 x 512 (displays inline as 506 x 253)
+* Twitter Card: _twitter:card = summary_large_image_ - 2:1 ratio (300 x 157 min, 4096 x 4096 max)
+* Twitter Card: _twitter:card = player_
 
 ## Facebook Image Dimensions
 * Cover Photo (profile and page) - 851 x 315
@@ -88,6 +90,7 @@ It's just a pain to go searching for this information to update company, persona
 
 #### References
 * https://support.twitter.com/articles/127871
+* https://dev.twitter.com/cards/types/summary-large-image (twitter card summary large image)
 * https://www.facebook.com/help/266520536764594/ (fb cover photo)
 * https://www.facebook.com/help/492441920771107/ (fb profile pic)
 * https://www.facebook.com/help/388305657884730/ (fb profile and cover photo)
