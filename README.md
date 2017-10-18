@@ -2,7 +2,7 @@
 
 This is an always up-to-date quick reference guide to social media image sizes for proper profile building, image and link sharing, and new posts. (_References and sources listed at the bottom_). Is something outdated? Want to add info? See: [Contributing]
 
-[Contributing]: https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/CONTRIBUTING.md
+[Contributing]: https://github.com/chuckreynolds/social-profile-image-sizes/blob/master/CONTRIBUTING.md
 
 ![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
 
