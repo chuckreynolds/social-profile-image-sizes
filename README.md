@@ -1,6 +1,8 @@
 # Social Media Image Sizes Reference Guide
 
-This is an always up-to-date quick reference guide to social media image sizes for proper profile building, image and link sharing, and new posts. References and sources listed at the bottom.
+This is an always up-to-date quick reference guide to social media image sizes for proper profile building, image and link sharing, and new posts. (_References and sources listed at the bottom_). Is something outdated? Want to add info? See: [Contributing]
+
+[Contributing]: https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/CONTRIBUTING.md
 
 ![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
 
@@ -79,8 +81,9 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile & Tracks - 1400 x 1400 (800 x 800 min)
 
 ## Why this guide?
-It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Requests](https://github.com/chuckreynolds/social-profile-image-sizes/pulls) and [Issues](https://github.com/chuckreynolds/social-profile-image-sizes/issues) are open!** Cheers
-
+It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Request] and [Issue] are open!** Cheers
+[Pull Request]: https://github.com/chuckreynolds/social-profile-image-sizes/compare
+[Issue]: https://github.com/chuckreynolds/social-profile-image-sizes/issues
 
 #### Notes
 * As most profile images are square - It's best to just have a 600x600ish image that you can use for all the square profile photos and let the sites resize them to what they want
@@ -99,7 +102,7 @@ It's just a pain to go searching for this information to update company, persona
 * https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
 * https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
 * https://twitter.com/Medium/status/587718302765416448
-* https://business.pinterest.com/en/make-great-pins (also was sent a pptx from pinterest biz)
+* https://business.pinterest.com/en/make-great-pins (also was emailed a pptx from pinterest biz)
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
