@@ -81,10 +81,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile & Tracks - 1400 x 1400 (800 x 800 min)
 
 ## Why this guide?
-It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **[Pull Request] and [Issue] are open!** Cheers
-
-[Pull Request]: https://github.com/chuckreynolds/social-profile-image-sizes/compare
-[Issue]: https://github.com/chuckreynolds/social-profile-image-sizes/issues
+It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **See: [Contributing]**  Cheers
 
 #### Notes
 * As most profile images are square - It's best to just have a 600x600ish image that you can use for all the square profile photos and let the sites resize them to what they want
