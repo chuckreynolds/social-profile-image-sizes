@@ -74,11 +74,15 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile Banner - 1200 x 380 (<3Mb)
 * Video Offline Banner - 1920 x 1080 (or 1280 x 720, just 16x9 ratio)
 * Subscriber Emoticons - 28 x 28, 56 x 56, and 112 x 112 (png, 25kb or less each)
-* Subscriber Badges - 18 x 18, 36 x 36, and 72 x 72 ( 25kb or less each)
+* Subscriber Badges - 18 x 18, 36 x 36, and 72 x 72 (25kb or less each)
 * Panel Images - 320 (no height required but common is 100)
 
 ### SoundCloud
 * Profile & Tracks - 1400 x 1400 (800 x 800 min)
+
+### Nextdoor
+* Profile Image - 120 x 120 min (any square resizes)
+* Profile Summary Header - 578 x 116 (will crop to this size)
 
 ## Why this guide?
 It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **See: [Contributing]**
