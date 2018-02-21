@@ -18,6 +18,8 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Cover Photo (profile and page) - 851 x 315
 * Profile Photo - 300 x 300 (180 min)
 * Post Link Image - 1200 x 630 (600 x 315 min)
+* Event Image - 1920 x 1080 (400 x 150 min)
+* Event Video - 1920 x 1080 or Square (2:1 or 1:1)
 * App Icon - 111 x 74
 * Note Cover Photo - 1200 x 445
 
