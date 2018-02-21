@@ -54,7 +54,8 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ### Instagram Image Dimensions
 * Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
- *  *If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook.
+  * _If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook_
+* Instagram Story - 1080 x 1920
 
 ### Github Profile Dimensions
 * Profile (Identicon) Picture - 500 x 500
