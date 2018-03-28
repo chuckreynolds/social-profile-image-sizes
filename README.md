@@ -29,8 +29,8 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Post Image - 886 full, 497 single column (height is scaled for you)
 
 ### LinkedIn Image Dimensions
-* Profile Background - 1536 x 768
-* Profile Photo - 200 x 200
+* Profile Background - 1584 x 396
+* Profile Photo - 200 x 200 min
 
   **Linkedin Company / Career pages**
   * Overview Tab, Logo Image - 300 x 300
@@ -39,7 +39,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
   * Life Tab, Hero Image - 1128 x 376
   * Life Tab, Custom Modules - 502 x 282
   * Life Tab, Company Photos - 900 x 600
-  * Company Updates Posts - 1200 x 627
+  * Company Updates Posts - 1200 x 627 (1.91:1)
 
 ### Youtube Image Dimensions
 * Cover Photo - 2560 x 1440
