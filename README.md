@@ -80,6 +80,9 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Subscriber Badges - 18 x 18, 36 x 36, and 72 x 72 (25kb or less each)
 * Panel Images - 320 (no height required but common is 100)
 
+### Gmail (Google Apps)
+* Header Logo  - 320 x 132 (png, 35kb or less)
+
 ### SoundCloud
 * Profile & Tracks - 1400 x 1400 (800 x 800 min)
 
