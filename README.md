@@ -114,4 +114,4 @@ It's just a pain to go searching for this information to update company, persona
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
-* Twitch: [sub badges](https://help.twitch.tv/customer/en/portal/articles/2579670-subscriber-badge-guide), [sub emotes](https://help.twitch.tv/customer/en/portal/articles/2348985-partner-emoticon-and-badge-guide)
+* Twitch: [channel page](https://help.twitch.tv/customer/en/portal/articles/2853486-channel-page-setup), [sub badges](https://help.twitch.tv/customer/en/portal/articles/2579670-subscriber-badge-guide), [sub emotes](https://help.twitch.tv/customer/en/portal/articles/2348985-partner-emoticon-and-badge-guide)
