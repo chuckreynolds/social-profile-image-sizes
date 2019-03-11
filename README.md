@@ -16,17 +16,12 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ## Facebook Image Dimensions
 * Cover Photo (profile and page) - 851 x 315
-* Profile Photo - 300 x 300 (180 min)
+* Profile Photo - 320 x 320
 * Post Link Image - 1200 x 630 (600 x 315 min)
 * Event Image - 1920 x 1080 (400 x 150 min)
 * Event Video - 1920 x 1080 or Square (2:1 or 1:1)
 * App Icon - 111 x 74
 * Note Cover Photo - 1200 x 445
-
-### Google Plus Image Dimensions
-* Cover Photo - 2120 x 1192 (1080 x 608 min)
-* Profile Photo - 250 x 250
-* Post Image - 886 full, 497 single column (height is scaled for you)
 
 ### LinkedIn Image Dimensions
 * Profile Background - 1584 x 396
@@ -106,7 +101,6 @@ It's just a pain to go searching for this information to update company, persona
 * https://www.facebook.com/help/492441920771107/ (fb profile pic)
 * https://www.facebook.com/help/388305657884730/ (fb profile and cover photo)
 * https://developers.facebook.com/docs/sharing/best-practices#images (fb sharing images)
-* https://support.google.com/plus/answer/1057172?hl=en
 * https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
 * https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
 * https://twitter.com/Medium/status/587718302765416448
