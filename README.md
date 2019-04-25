@@ -54,6 +54,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ### Github Profile Dimensions
 * Profile (Identicon) Picture - 500 x 500
+* Repo Social Preview image - 1280 × 640
 
 ### Tumblr Image Dimensions
 * Post Image - 1280 x 1920 (500 x 750 min before scaling)
