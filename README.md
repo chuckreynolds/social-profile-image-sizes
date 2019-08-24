@@ -40,6 +40,11 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Cover Photo - 2560 x 1440
 * Video Thumbnail - 1280 x 720 (that's HD yo)
 
+### Reddit Subreddit Icons and Banners
+* Subreddit Icon - 256 x 256
+* Subreddit Banner - 4000 x 128
+* Subreddit Mobile Banner - 1600 x 480
+
 ### Pinterest Image Dimensions
 * Profile - 400 x 400 (any square, displays as 168 circle)
 * Post Image - 1000 x 1500 (2:3 ratio, up to 1560 tall max before gets cut off)
@@ -91,16 +96,18 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile Image - 120 x 120 min (any square resizes)
 * Profile Summary Header - 578 x 116 (will crop to this size)
 
-## Why this guide?
+---
+
+# Why this guide?
 It's just a pain to go searching for this information to update company, personal and client profiles and with as much as it changes per site there needs to be one area for it. There are a lot of posts with infographics and too much wording. This is fast and simple. Plus I made it a repo instead of a Gist so people can help me update it. **See: [Contributing]**
 
-#### Notes
+### Notes
 * As most profile images are square - It's best to just have a 600x600ish image that you can use for all the square profile photos and let the sites resize them to what they want
 * All sizes here are in pixels (px)
 * If there's a single size listed here, that's the width meaning height doesn't matter in that case
 
 
-#### References
+# References
 * https://help.twitter.com/en/managing-your-account/how-to-customize-your-profile
 * https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image (twitter card summary large image)
 * https://www.facebook.com/help/266520536764594/ (fb cover photo)
@@ -113,4 +120,5 @@ It's just a pain to go searching for this information to update company, persona
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
 * https://help.github.com/articles/setting-your-profile-picture/
+* Reddit: [banner](https://mods.reddithelp.com/hc/en-us/articles/360010112892-Banner), [icon](https://mods.reddithelp.com/hc/en-us/articles/360008805651-Name-icon)
 * Twitch: [channel page](https://help.twitch.tv/s/article/channel-page-setup), [sub badges](https://help.twitch.tv/s/article/subscriber-badge-guide), [sub emotes](https://help.twitch.tv/s/article/subscriber-emoticon-guide)
