@@ -7,7 +7,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
 
 
-## Twitter Image Dimensions
+## X (formerly Twitter) Image Dimensions
 * Header Image - 1500 x 500
 * Profile Photo - 400 x 400
 * Post Image - 1024 x 512 (displays inline as 506 x 253)
@@ -17,7 +17,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 ## Facebook Image Dimensions
 * Cover Photo (profile and page) - 851 x 315
 * Profile Photo - 320 x 320
-* Post Link Image - 1200 x 630 (600 x 315 min)
+* Post Link Image (Open Graph) - 1200 x 630 (600 x 315 min)
 * Event Image - 1920 x 1080 (400 x 150 min)
 * Event Video - 1920 x 1080 or Square (2:1 or 1:1)
 * App Icon - 111 x 74
@@ -37,8 +37,12 @@ This is an always up-to-date quick reference guide to social media image sizes f
   * Company Updates Posts - 1200 x 627 (1.91:1)
 
 ### Youtube Image Dimensions
-* Cover Photo - 2560 x 1440
-* Video Thumbnail - 1280 x 720 (that's HD yo)
+* Channel Banner / Cover - 2560 x 1440
+* Video Thumbnail - 1280 x 720
+* Youtube Shorts Video - 1080 x 1920 (9:16 ratio)
+
+### TikTok Image / Video Sizes
+* 1080 x 1920 (9:16 ratio)
 
 ### Reddit Subreddit Icons and Banners
 * Subreddit Icon - 256 x 256
@@ -109,16 +113,16 @@ It's just a pain to go searching for this information to update company, persona
 
 # References
 * https://help.twitter.com/en/managing-your-account/how-to-customize-your-profile
-* https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image (twitter card summary large image)
-* https://www.facebook.com/help/266520536764594/ (fb cover photo)
-* https://www.facebook.com/help/492441920771107/ (fb profile pic)
+* https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image (twitter card summary large image)
+* https://www.facebook.com/help/125379114252045 (fb cover photo)
+* https://www.facebook.com/help/163248423739693 (fb profile pic)
 * https://developers.facebook.com/docs/sharing/best-practices#images (fb sharing images)
 * https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
 * https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
 * https://twitter.com/Medium/status/587718302765416448
-* https://business.pinterest.com/en/Pinterest-product-specs (also was emailed a pptx from pinterest biz)
+* https://business.pinterest.com/creative-best-practices/
 * https://codex.wordpress.org/Theme_Development#Screenshot
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
-* https://help.github.com/articles/setting-your-profile-picture/
+* https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile
 * Reddit: [banner](https://mods.reddithelp.com/hc/en-us/articles/360010112892-Banner), [icon](https://mods.reddithelp.com/hc/en-us/articles/360008805651-Name-icon)
 * Twitch: [channel page](https://help.twitch.tv/s/article/channel-page-setup), [sub badges](https://help.twitch.tv/s/article/subscriber-badge-guide), [sub emotes](https://help.twitch.tv/s/article/subscriber-emoticon-guide)
