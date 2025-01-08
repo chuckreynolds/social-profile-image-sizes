@@ -6,7 +6,7 @@ For most instances just create an [Issue] on this repo. **Please include the old
 
 [Issue]: https://github.com/chuckreynolds/social-profile-image-sizes/issues
 [Pull Request]: https://github.com/chuckreynolds/social-profile-image-sizes/compare
-[tweet me]: https://twitter.com/chuckreynolds
+[tweet me]: https://x.com/chuckreynolds
 
 
 I will certainly try to review and act on any requests as soon as I can; I want to make sure this reference guide remains accurate.
