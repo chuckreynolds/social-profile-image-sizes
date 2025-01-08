@@ -25,16 +25,15 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 ### LinkedIn Image Dimensions
 * Profile Background - 1584 x 396
-* Profile Photo - 200 x 200 min
+* Profile Photo - 400 x 400 min
 
   **Linkedin Company / Career pages**
-  * Overview Tab, Logo Image - 300 x 300
-  * Overview Tab, Overview Tab Image - 360 x 120
-  * Overview Tab, Cover Image - 1536 x 768
+  * Overview Tab, Logo Image - 400 x 400
+  * Overview Tab, Cover Image - 1128 x 191
   * Life Tab, Main Image - 1128 x 376
   * Life Tab, Custom Modules - 502 x 282
   * Life Tab, Company Photos - 900 x 600
-  * Company Updates Posts - 1200 x 627 (1.91:1)
+  * Company Updates Post Images - 1200 x 627 (1.91:1)
 
 ### Youtube Image Dimensions
 * Channel Banner / Cover - 2560 x 1440
@@ -117,8 +116,8 @@ It's just a pain to go searching for this information to update company, persona
 * https://www.facebook.com/help/125379114252045 (fb cover photo)
 * https://www.facebook.com/help/163248423739693 (fb profile pic)
 * https://developers.facebook.com/docs/sharing/best-practices#images (fb sharing images)
-* https://www.linkedin.com/help/linkedin/answer/49960 (linkedin profile bg)
-* https://www.linkedin.com/help/linkedin/answer/70781 (linkedin company pages)
+* https://www.linkedin.com/help/linkedin/answer/a568217/ (linkedin profile bg)
+* https://www.linkedin.com/help/linkedin/answer/a563309/ (linkedin company & career pages)
 * https://twitter.com/Medium/status/587718302765416448
 * https://business.pinterest.com/creative-best-practices/
 * https://codex.wordpress.org/Theme_Development#Screenshot
