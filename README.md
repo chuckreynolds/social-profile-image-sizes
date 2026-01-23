@@ -8,6 +8,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 
 ## X (formerly Twitter) Image Dimensions
+* X Article Image - 5:2 ratio (example 1000 x 400)
 * Header Image - 1500 x 500
 * Profile Photo - 400 x 400
 * Post Image - 1024 x 512 (displays inline as 506 x 253)
