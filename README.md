@@ -18,8 +18,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Cover Photo (profile and page) - 851 x 315
 * Profile Photo - 320 x 320
 * Post Link Image (Open Graph) - 1200 x 630 (600 x 315 min)
-* Event Image - 1920 x 1080 (400 x 150 min)
-* Event Video - 1920 x 1080 or Square (2:1 or 1:1)
+* Event Image or Video - 1920 x 1005
 * App Icon - 111 x 74
 * Note Cover Photo - 1200 x 445
 
@@ -36,17 +35,17 @@ This is an always up-to-date quick reference guide to social media image sizes f
   * Company Updates Post Images - 1200 x 627 (1.91:1)
 
 ### Youtube Image Dimensions
-* Channel Banner / Cover - 2560 x 1440
-* Video Thumbnail - 1280 x 720
+* Channel Banner / Cover - 2048 × 1152 pixels (16:9 ratio)
+* Video Thumbnail - 1920 x 1080
 * Youtube Shorts Video - 1080 x 1920 (9:16 ratio)
 
 ### TikTok Image / Video Sizes
-* 1080 x 1920 (9:16 ratio)
+* Video feed - 1080 x 1920 (9:16 ratio)
 
 ### Reddit Subreddit Icons and Banners
 * Subreddit Icon - 256 x 256
-* Subreddit Banner - 4000 x 128
-* Subreddit Mobile Banner - 1600 x 480
+* Subreddit Banner - 1920 x 384
+* Subreddit Mobile Banner - 960 x 384
 
 ### Pinterest Image Dimensions
 * Profile - 400 x 400 (any square, displays as 168 circle)
@@ -56,13 +55,12 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Board Cover - 377 x 377
 
 ### Instagram Image Dimensions
-* Recommended 1:1 ratio with a minimum of 600px* width, 1200px recommended. Landscape images with a ratio between 1.91:1 and 4:5 are also supported as of 2015.
-  * _If creating an Instagram ad, minimum 1200px width is recommended so it can also be run on Facebook_
-* Instagram Story - 1080 x 1920
+* Feed Posts - 1080 x 1440 (3:4 ratio)
+* Story & Reels - 1080 x 1920 (9:16 ratio)
 
 ### Github Profile Dimensions
-* Profile (Identicon) Picture - 460 x 460
-* Repo Social Preview image - 1280 × 640
+* Profile (Identicon) Picture - 500 x 500
+* Repo Social Preview image - 1200 × 630
 
 ### Tumblr Image Dimensions
 * Post Image - 1280 x 1920 (500 x 750 min before scaling)
@@ -99,6 +97,13 @@ This is an always up-to-date quick reference guide to social media image sizes f
 * Profile Image - 120 x 120 min (any square resizes)
 * Profile Summary Header - 578 x 116 (will crop to this size)
 
+### Bluesky
+* Profile Picture	- 400 x 400
+* Banner Image - 1500 x 500
+* Standard Single and Multiple Post Images - 1080 x 1080
+* Landscape - 1200 x 627 (1.91:1 ratio)
+* Portrait - 627 x 1200 pixels (4:5 ratio)
+
 ---
 
 # Why this guide?
@@ -111,17 +116,17 @@ It's just a pain to go searching for this information to update company, persona
 
 
 # References
-* https://help.twitter.com/en/managing-your-account/how-to-customize-your-profile
-* https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image (twitter card summary large image)
+* https://help.x.com/en/managing-your-account/how-to-customize-your-profile
+* https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image (twitter card summary large image)
+* https://x.com/Medium/status/587718302765416448
 * https://www.facebook.com/help/125379114252045 (fb cover photo)
 * https://www.facebook.com/help/163248423739693 (fb profile pic)
 * https://developers.facebook.com/docs/sharing/best-practices#images (fb sharing images)
 * https://www.linkedin.com/help/linkedin/answer/a568217/ (linkedin profile bg)
 * https://www.linkedin.com/help/linkedin/answer/a563309/ (linkedin company & career pages)
-* https://twitter.com/Medium/status/587718302765416448
 * https://business.pinterest.com/creative-best-practices/
-* https://codex.wordpress.org/Theme_Development#Screenshot
+* https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/#theme-screenshots
 * https://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/
-* https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile
-* Reddit: [banner](https://mods.reddithelp.com/hc/en-us/articles/360010112892-Banner), [icon](https://mods.reddithelp.com/hc/en-us/articles/360008805651-Name-icon)
-* Twitch: [channel page](https://help.twitch.tv/s/article/channel-page-setup), [sub badges](https://help.twitch.tv/s/article/subscriber-badge-guide), [sub emotes](https://help.twitch.tv/s/article/subscriber-emoticon-guide)
+* https://docs.github.com/en/account-and-profile/tutorials/personalize-your-profile
+* Reddit: [banner](https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner), [icon](https://support.reddithelp.com/hc/en-us/articles/15484265952660-Community-icon)
+* Twitch: [channel page](https://help.twitch.tv/s/article/channel-page-setup), [sub badges](https://help.twitch.tv/s/article/subscriber-badge-guide), [sub emotes](https://help.twitch.tv/s/article/subscriber-emote-guide)
