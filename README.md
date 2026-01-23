@@ -4,8 +4,7 @@ This is an always up-to-date quick reference guide to social media image sizes f
 
 [Contributing]: https://github.com/chuckreynolds/social-profile-image-sizes/blob/master/CONTRIBUTING.md
 
-![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/socialmedia-img-sizes.png)
-
+![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/social-media-image-sizes-repo-header.jpg)
 
 ## X (formerly Twitter) Image Dimensions
 * X Article Image - 5:2 ratio (example 1000 x 400)
