@@ -1,14 +1,26 @@
 # Contributing
 
-While I'd love to keep this reference repo fresh and updated, life gets in the way and also I don't have a firehose from all of these sources to know when they secretly change things. That's where you come in! If you see something that's out of date, or wrong, or you'd like to add some reference copy; by all means please do!
+This repo lives or dies on accuracy. Platforms change image specs without notice and I don't get a firehose of those updates — that's where you come in. If something is wrong, outdated, or missing, please help me fix it.
 
-For most instances just create an [Issue] on this repo. **Please include the old info you're modifying, the new info, and the source to verify**. If you're savvy with markdown, feel free to make a [Pull Request]. If you're lazy, just [tweet me] and lmk what needs to be fixed.
+## How to contribute
+
+**Open an [Issue]** with:
+- the value being changed (or the platform/dimension being added)
+- the new value
+- a link to a **first-party source** — the platform's official help docs, dev docs, or brand guidelines, not a third-party blog post
+
+If you're comfortable with markdown, send a [Pull Request] directly. Same sourcing rule applies.
+
+If neither of those is your thing, just [DM me on X] and lmk what needs fixing.
+
+## What stays in / out
+
+- Sizes must come from a first-party source. If a platform doesn't publish a spec, that gets noted inline.
+- Kept simple — dimensions first; brief notes only when something unusual (file-size cap, safe zone) makes a real difference.
+- New platforms welcome if they have broad use. Not chasing every long-tail network.
+
+Thanks for the help — I'll review as fast as I can.
 
 [Issue]: https://github.com/chuckreynolds/social-profile-image-sizes/issues
 [Pull Request]: https://github.com/chuckreynolds/social-profile-image-sizes/compare
-[tweet me]: https://x.com/chuckreynolds
-
-
-I will certainly try to review and act on any requests as soon as I can; I want to make sure this reference guide remains accurate.
-
-Thank you for your help!
+[DM me on X]: https://x.com/chuckreynolds
