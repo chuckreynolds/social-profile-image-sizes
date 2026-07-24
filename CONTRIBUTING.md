@@ -11,6 +11,8 @@ This repo lives or dies on accuracy. Platforms change image specs without notice
 
 If you're comfortable with markdown, send a [Pull Request] directly. Same sourcing rule applies.
 
+**One thing to know before you PR:** `README.md` is generated. Edit [`data/sizes.json`](data/sizes.json) instead, then run `npm run build` and commit both. `npm run validate` catches the usual mistakes and CI runs it on every PR. Full details in [AGENTS.md](AGENTS.md).
+
 If neither of those is your thing, just [DM me on X] and lmk what needs fixing.
 
 ## What stays in / out

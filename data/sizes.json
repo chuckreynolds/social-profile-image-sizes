@@ -1,0 +1,1512 @@
+{
+  "$schema": "./schema.json",
+  "meta": {
+    "title": "Social Media Image Sizes Reference Guide",
+    "repository": "https://github.com/chuckreynolds/social-profile-image-sizes",
+    "license": "MIT",
+    "last_verified": "2026-07-24",
+    "units": "pixels",
+    "about_published_flag": "published:false means the platform states no such size in any first-party documentation. The value is an observed convention that generally renders well, but it cannot be cited and may drift."
+  },
+  "platforms": [
+    {
+      "id": "x",
+      "name": "X (formerly Twitter)",
+      "aka": [
+        "Twitter"
+      ],
+      "note": "X retired its Cards documentation when developer.x.com moved to docs.x.com — the old deep links now redirect to a generic overview and no replacement spec page exists. The card values below are the last officially published figures and can no longer be confirmed first-party.",
+      "sources": [
+        {
+          "title": "help.x.com — uploading profile photos and headers and best sizes",
+          "url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "max_bytes": 2097152,
+          "formats": [
+            "jpeg",
+            "gif",
+            "png"
+          ],
+          "qualifier": "max 2MB; JPEG / GIF / PNG, no animated GIFs",
+          "published": true,
+          "source_url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "header",
+          "label": "Header Image",
+          "render": "1500 x 500",
+          "width": 1500,
+          "height": 500,
+          "aspect": "3:1",
+          "qualifier": "~60 px top and bottom can crop depending on monitor/browser",
+          "published": true,
+          "source_url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "post-image",
+          "label": "Post Image",
+          "render": "1024 x 512",
+          "width": 1024,
+          "height": 512,
+          "aspect": "2:1",
+          "qualifier": "displays inline as 506 x 253; 1200 x 675 also common for landscape",
+          "published": false,
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "display",
+              "width": 506,
+              "height": 253,
+              "description": "inline render in the timeline"
+            },
+            {
+              "label": "alternate",
+              "width": 1200,
+              "height": 675,
+              "description": "common landscape choice"
+            }
+          ]
+        },
+        {
+          "id": "article-image",
+          "label": "Article Image",
+          "render": "5:2 ratio, e.g. 1000 x 400",
+          "width": 1000,
+          "height": 400,
+          "aspect": "5:2",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "card-summary",
+          "label": "Card `twitter:card = summary`",
+          "render": "1:1",
+          "aspect": "1:1",
+          "min": {
+            "width": 144,
+            "height": 144
+          },
+          "max": {
+            "width": 4096,
+            "height": 4096
+          },
+          "qualifier": "144 x 144 min, 4096 x 4096 max",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "Last published by developer.x.com before the docs.x.com migration removed the Cards section."
+          ]
+        },
+        {
+          "id": "card-summary-large-image",
+          "label": "Card `twitter:card = summary_large_image`",
+          "render": "2:1 ratio",
+          "aspect": "2:1",
+          "min": {
+            "width": 300,
+            "height": 157
+          },
+          "max": {
+            "width": 4096,
+            "height": 4096
+          },
+          "qualifier": "300 x 157 min, 4096 x 4096 max",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "Last published by developer.x.com before the docs.x.com migration removed the Cards section."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "sources": [
+        {
+          "title": "facebook.com/help — cover photo",
+          "url": "https://www.facebook.com/help/125379114252045"
+        },
+        {
+          "title": "developers.facebook.com — sharing best practices",
+          "url": "https://developers.facebook.com/docs/sharing/webmasters/images"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "320 x 320",
+          "width": 320,
+          "height": 320,
+          "aspect": "1:1",
+          "qualifier": "displays as a circle; Facebook no longer states a size",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "cover-photo",
+          "label": "Cover Photo",
+          "render": "851 x 315 optimal",
+          "width": 851,
+          "height": 315,
+          "min": {
+            "width": 400,
+            "height": 150
+          },
+          "max_bytes": 102400,
+          "formats": [
+            "jpg"
+          ],
+          "qualifier": "400 x 150 min; sRGB JPG under 100KB recommended",
+          "detail": [
+            "Crops to 16:9 on desktop and 2.4:1 on mobile — keep key content centered"
+          ],
+          "published": true,
+          "source_url": "https://www.facebook.com/help/125379114252045",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "open-graph",
+          "label": "Post Link Image (Open Graph)",
+          "render": "1200 x 630",
+          "width": 1200,
+          "height": 630,
+          "aspect": "1.91:1",
+          "min": {
+            "width": 200,
+            "height": 200
+          },
+          "max_bytes": 8388608,
+          "qualifier": "1.91:1; 600 x 315 min for the large render, 200 x 200 absolute min, 8MB max",
+          "published": true,
+          "source_url": "https://developers.facebook.com/docs/sharing/webmasters/images",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "minimum-for-feature",
+              "width": 600,
+              "height": 315,
+              "description": "below this Facebook renders a small thumbnail instead of the large image"
+            }
+          ]
+        },
+        {
+          "id": "event-image",
+          "label": "Event Image",
+          "render": "1200 x 628",
+          "width": 1200,
+          "height": 628,
+          "aspect": "1.91:1",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "app-icon",
+          "label": "App Icon",
+          "render": "1024 x 1024",
+          "width": 1024,
+          "height": 1024,
+          "aspect": "1:1",
+          "formats": [
+            "png"
+          ],
+          "qualifier": "PNG, for Facebook Login app config",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "Required by the app dashboard UI, but not stated in a fetchable public doc."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "sources": [
+        {
+          "title": "help.instagram.com — image resolution",
+          "url": "https://help.instagram.com/1631821640426723"
+        },
+        {
+          "title": "Reel size & aspect ratios",
+          "url": "https://help.instagram.com/1038071743007909"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "320 x 320",
+          "width": 320,
+          "height": 320,
+          "aspect": "1:1",
+          "qualifier": "displays as circle",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "feed-post",
+          "label": "Feed Posts",
+          "render": "upload at 1080 px wide",
+          "width": 1080,
+          "qualifier": "Instagram keeps 320–1080 px wide as-is, downsizes anything larger",
+          "detail": [
+            "Supported aspect range is 1.91:1 to 3:4 — i.e. 1080 x 566 (landscape) through 1080 x 1440 (max portrait)",
+            "1080 x 1350 (4:5) and 1080 x 1080 (1:1) are the common picks; anything outside the range gets cropped"
+          ],
+          "published": true,
+          "source_url": "https://help.instagram.com/1631821640426723",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "stories-reels",
+          "label": "Stories & Reels",
+          "render": "9:16, min 720 px resolution, min 30 FPS",
+          "aspect": "9:16",
+          "width": 1080,
+          "height": 1920,
+          "qualifier": "1080 x 1920 standard",
+          "published": true,
+          "source_url": "https://help.instagram.com/1038071743007909",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "reel-cover",
+          "label": "Reel Cover Photo",
+          "render": "420 x 654",
+          "width": 420,
+          "height": 654,
+          "aspect": "1:1.55",
+          "qualifier": "1:1.55 — can't be changed after upload",
+          "published": true,
+          "source_url": "https://help.instagram.com/1038071743007909",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "reel-safe-zone",
+          "label": "Reel Safe Zone",
+          "render": "1080 x 1420",
+          "width": 1080,
+          "height": 1420,
+          "qualifier": "top/bottom ~250 px overlaid by UI",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "note": "Meta hasn't published first-party Threads media specs, so every value below is unpublished — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior.",
+      "sources": [],
+      "assets": [
+        {
+          "id": "profile-picture",
+          "label": "Profile Picture",
+          "render": "320 x 320",
+          "width": 320,
+          "height": 320,
+          "aspect": "1:1",
+          "qualifier": "1:1, syncs from Instagram",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "post-image",
+          "label": "Post Image",
+          "render": "1080 x 1350",
+          "width": 1080,
+          "height": 1350,
+          "aspect": "4:5",
+          "qualifier": "4:5 portrait recommended; also 1:1 and 1.91:1",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "carousel",
+          "label": "Carousel",
+          "render": "up to 10 images",
+          "width": 1080,
+          "qualifier": "≥1080 px wide each",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "video",
+          "label": "Video",
+          "render": "1080 x 1920",
+          "width": 1080,
+          "height": 1920,
+          "aspect": "9:16",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "link-preview",
+          "label": "Link Preview",
+          "render": "1200 x 600",
+          "width": 1200,
+          "height": 600,
+          "aspect": "2:1",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "sources": [
+        {
+          "title": "linkedin.com/help — profile background",
+          "url": "https://www.linkedin.com/help/linkedin/answer/a568217"
+        },
+        {
+          "title": "company & career pages",
+          "url": "https://www.linkedin.com/help/linkedin/answer/a563309"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "min": {
+            "width": 268,
+            "height": 268
+          },
+          "qualifier": "268 x 268 min",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "profile-background",
+          "label": "Profile Background",
+          "render": "1584 x 396",
+          "width": 1584,
+          "height": 396,
+          "aspect": "4:1",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a568217",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "company-logo",
+          "label": "Logo",
+          "group": "LinkedIn Company / Career pages",
+          "render": "400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "min": {
+            "width": 268,
+            "height": 268
+          },
+          "qualifier": "268 x 268 min",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "company-cover",
+          "label": "Cover Image",
+          "group": "LinkedIn Company / Career pages",
+          "render": "4200 x 700",
+          "width": 4200,
+          "height": 700,
+          "aspect": "6:1",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "life-tab-main",
+          "label": "Life Tab Main Image",
+          "group": "LinkedIn Company / Career pages",
+          "render": "1128 x 376",
+          "width": 1128,
+          "height": 376,
+          "aspect": "3:1",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "life-tab-modules",
+          "label": "Life Tab Custom Modules",
+          "group": "LinkedIn Company / Career pages",
+          "render": "502 x 282",
+          "width": 502,
+          "height": 282,
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "life-tab-photos",
+          "label": "Life Tab Company Photos",
+          "group": "LinkedIn Company / Career pages",
+          "render": "900 x 600",
+          "width": 900,
+          "height": 600,
+          "aspect": "3:2",
+          "min": {
+            "width": 264,
+            "height": 176
+          },
+          "qualifier": "264 x 176 min",
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "company-post-image",
+          "label": "Company Post Images (with link)",
+          "group": "LinkedIn Company / Career pages",
+          "render": "1200 x 627",
+          "width": 1200,
+          "height": 627,
+          "aspect": "1.91:1",
+          "min": {
+            "width": 200
+          },
+          "max_bytes": 3145728,
+          "formats": [
+            "png",
+            "jpeg"
+          ],
+          "qualifier": "1.91:1, 200 px min width",
+          "detail": [
+            "All page images: PNG or JPEG, 3MB max — LinkedIn recommends a high-res JPEG over PNG"
+          ],
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "sources": [
+        {
+          "title": "support.google.com/youtube — manage your channel branding",
+          "url": "https://support.google.com/youtube/answer/10456525"
+        },
+        {
+          "title": "video thumbnails",
+          "url": "https://support.google.com/youtube/answer/72431"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-picture",
+          "label": "Profile Picture",
+          "render": "displays at 98 x 98",
+          "width": 98,
+          "height": 98,
+          "aspect": "1:1",
+          "max_bytes": 15728640,
+          "qualifier": "15MB max; upload 800 x 800 so it stays sharp everywhere",
+          "published": true,
+          "source_url": "https://support.google.com/youtube/answer/10456525",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "alternate",
+              "width": 800,
+              "height": 800,
+              "description": "recommended upload size"
+            }
+          ]
+        },
+        {
+          "id": "channel-banner",
+          "label": "Channel Banner / Cover",
+          "render": "2048 x 1152 min",
+          "width": 2560,
+          "height": 1440,
+          "aspect": "16:9",
+          "min": {
+            "width": 2048,
+            "height": 1152
+          },
+          "max_bytes": 6291456,
+          "qualifier": "16:9 ratio; 2560 x 1440 recommended for TV; safe area 1235 x 338; 6MB max",
+          "published": true,
+          "source_url": "https://support.google.com/youtube/answer/10456525",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "safe-area",
+              "width": 1235,
+              "height": 338,
+              "description": "text and logos stay inside this on every device"
+            }
+          ]
+        },
+        {
+          "id": "video-thumbnail",
+          "label": "Video Thumbnail",
+          "render": "3840 x 2160 recommended",
+          "width": 3840,
+          "height": 2160,
+          "aspect": "16:9",
+          "min": {
+            "width": 640
+          },
+          "max_bytes": 52428800,
+          "formats": [
+            "jpg",
+            "gif",
+            "png"
+          ],
+          "qualifier": "16:9, 640 px min width; 2MB max on mobile, 50MB on desktop",
+          "detail": [
+            "1:1 for podcast playlists. Vertical videos with 16:9 thumbnails get an auto-generated 4:5 replacement in some surfaces."
+          ],
+          "published": true,
+          "source_url": "https://support.google.com/youtube/answer/72431",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "shorts",
+          "label": "YouTube Shorts Video",
+          "render": "1080 x 1920",
+          "width": 1080,
+          "height": 1920,
+          "aspect": "9:16",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "YouTube documents Shorts as vertical but publishes no pixel dimension."
+          ]
+        },
+        {
+          "id": "watermark",
+          "label": "Video Watermark",
+          "render": "150 x 150 min",
+          "min": {
+            "width": 150,
+            "height": 150
+          },
+          "aspect": "1:1",
+          "max_bytes": 1048576,
+          "qualifier": "square, under 1MB",
+          "published": true,
+          "source_url": "https://support.google.com/youtube/answer/10456525",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "sources": [
+        {
+          "title": "support.tiktok.com — adding a profile photo",
+          "url": "https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video"
+        },
+        {
+          "title": "ads.tiktok.com — in-feed ad video specifications",
+          "url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "20 x 20 min is the *only* size TikTok publishes",
+          "min": {
+            "width": 20,
+            "height": 20
+          },
+          "aspect": "1:1",
+          "qualifier": "upload 400 x 400 or larger square; displays as circle",
+          "published": true,
+          "source_url": "https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "alternate",
+              "width": 400,
+              "height": 400,
+              "description": "practical upload size for a crisp circle"
+            }
+          ]
+        },
+        {
+          "id": "video-feed",
+          "label": "Video Feed",
+          "render": "9:16 recommended, 540 x 960 min",
+          "aspect": "9:16",
+          "width": 1080,
+          "height": 1920,
+          "min": {
+            "width": 540,
+            "height": 960
+          },
+          "qualifier": "per TikTok's ad specs; 1080 x 1920 is the practical standard",
+          "detail": [
+            "Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)"
+          ],
+          "published": true,
+          "source_url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "photo-mode",
+          "label": "Photo Mode Posts",
+          "render": "1080 x 1920",
+          "width": 1080,
+          "height": 1920,
+          "aspect": "9:16",
+          "qualifier": "up to 35 photos per post",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "bluesky",
+      "name": "Bluesky",
+      "note": "Bluesky publishes no size doc. All values below are unpublished — derived from the app and ATProto blob limits (1MB per image is the enforced one).",
+      "sources": [
+        {
+          "title": "bsky.app",
+          "url": "https://bsky.app/"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-picture",
+          "label": "Profile Picture",
+          "render": "400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "banner",
+          "label": "Banner Image",
+          "render": "1500 x 500",
+          "width": 1500,
+          "height": 500,
+          "aspect": "3:1",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "post-image",
+          "label": "Post Image",
+          "render": "1080 x 1080",
+          "width": 1080,
+          "height": 1080,
+          "aspect": "1:1",
+          "max_bytes": 1048576,
+          "qualifier": "max 1MB per image",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "The 1MB cap is enforced by ATProto and is the one hard limit here."
+          ]
+        },
+        {
+          "id": "link-preview-landscape",
+          "label": "Landscape Link Preview",
+          "render": "1200 x 627",
+          "width": 1200,
+          "height": 627,
+          "aspect": "1.91:1",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "link-preview-portrait",
+          "label": "Portrait Link Preview",
+          "render": "627 x 1200",
+          "width": 627,
+          "height": 1200,
+          "aspect": "1:1.91",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "mastodon",
+      "name": "Mastodon",
+      "note": "Defaults from the reference Mastodon server software; individual instances can override.",
+      "sources": [
+        {
+          "title": "docs.joinmastodon.org — setting up your profile",
+          "url": "https://docs.joinmastodon.org/user/profile/"
+        }
+      ],
+      "assets": [
+        {
+          "id": "avatar",
+          "label": "Avatar",
+          "render": "downscales to 400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "max_bytes": 2097152,
+          "formats": [
+            "webp",
+            "png",
+            "gif",
+            "jpg"
+          ],
+          "qualifier": "max 2MB; WEBP/PNG/GIF/JPG",
+          "published": true,
+          "source_url": "https://docs.joinmastodon.org/user/profile/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "header",
+          "label": "Header",
+          "render": "downscales to 1500 x 500",
+          "width": 1500,
+          "height": 500,
+          "aspect": "3:1",
+          "max_bytes": 2097152,
+          "formats": [
+            "webp",
+            "png",
+            "gif",
+            "jpg"
+          ],
+          "qualifier": "max 2MB",
+          "published": true,
+          "source_url": "https://docs.joinmastodon.org/user/profile/",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "sources": [
+        {
+          "title": "support.reddithelp.com — community icon",
+          "url": "https://support.reddithelp.com/hc/en-us/articles/15484265952660-Community-icon"
+        },
+        {
+          "title": "banner",
+          "url": "https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner"
+        }
+      ],
+      "assets": [
+        {
+          "id": "community-icon",
+          "label": "Subreddit (Community) Icon",
+          "render": "300 x 300",
+          "width": 300,
+          "height": 300,
+          "aspect": "1:1",
+          "published": true,
+          "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484265952660-Community-icon",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "banner-desktop",
+          "label": "Subreddit Banner (desktop)",
+          "render": "at least 1072 x 128",
+          "min": {
+            "width": 1072,
+            "height": 128
+          },
+          "published": true,
+          "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "banner-mobile",
+          "label": "Subreddit Banner (mobile)",
+          "render": "at least 1080 x 128",
+          "min": {
+            "width": 1080,
+            "height": 128
+          },
+          "published": true,
+          "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "sources": [
+        {
+          "title": "business.pinterest.com — creative best practices",
+          "url": "https://business.pinterest.com/creative-best-practices/"
+        },
+        {
+          "title": "help.pinterest.com — pin specs",
+          "url": "https://help.pinterest.com/en/article/review-pin-specs"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-photo",
+          "label": "Profile Photo",
+          "render": "upload 400 x 400",
+          "width": 400,
+          "height": 400,
+          "aspect": "1:1",
+          "qualifier": "displays as 165 x 165 circle",
+          "published": false,
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "display",
+              "width": 165,
+              "height": 165,
+              "description": "rendered as a circle"
+            }
+          ]
+        },
+        {
+          "id": "profile-cover",
+          "label": "Profile Cover",
+          "render": "1920 x 1080",
+          "width": 1920,
+          "height": 1080,
+          "aspect": "16:9",
+          "qualifier": "16:9; image or video",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "standard-pin",
+          "label": "Standard Pin",
+          "render": "1000 x 1500",
+          "width": 1000,
+          "height": 1500,
+          "aspect": "2:3",
+          "max_bytes": 20971520,
+          "formats": [
+            "bmp",
+            "jpeg",
+            "png",
+            "tiff",
+            "webp"
+          ],
+          "qualifier": "2:3 ratio; larger ratios get cut off in feed",
+          "detail": [
+            "title: 100 char max — text box: 250 char max — description: up to 800 char (first 50–60 show in feed)",
+            "safe zones: 270 px top, 65 px left, 195 px right, 790 px bottom",
+            "file: BMP / JPEG / PNG / TIFF / WEBP, 20MB max on web"
+          ],
+          "published": true,
+          "source_url": "https://help.pinterest.com/en/article/review-pin-specs",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "video-pin",
+          "label": "Video Pin",
+          "render": "1080 x 1920",
+          "width": 1080,
+          "height": 1920,
+          "aspect": "9:16",
+          "qualifier": "9:16 ratio; 4 seconds to 5 minutes, H.264 or H.265",
+          "published": true,
+          "source_url": "https://help.pinterest.com/en/article/review-pin-specs",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "board-cover",
+          "label": "Board Cover",
+          "render": "600 x 600",
+          "width": 600,
+          "height": 600,
+          "aspect": "1:1",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr",
+      "sources": [
+        {
+          "title": "help.tumblr.com — image & GIF troubleshooting",
+          "url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/"
+        }
+      ],
+      "assets": [
+        {
+          "id": "avatar",
+          "label": "Avatar",
+          "render": "128 x 128",
+          "width": 128,
+          "height": 128,
+          "aspect": "1:1",
+          "max_bytes": 10485760,
+          "formats": [
+            "jpeg",
+            "png",
+            "webp"
+          ],
+          "qualifier": "max 10MB; JPEG / PNG / WEBP — GIFs go static",
+          "published": true,
+          "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "header",
+          "label": "Header Image",
+          "render": "2048 x 1152",
+          "width": 2048,
+          "height": 1152,
+          "aspect": "16:9",
+          "max_bytes": 10485760,
+          "qualifier": "16:9, max 10MB",
+          "published": true,
+          "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "post-image",
+          "label": "Post Image",
+          "render": "540 x 810 recommended",
+          "width": 540,
+          "height": 810,
+          "aspect": "2:3",
+          "max": {
+            "width": 2048,
+            "height": 3072
+          },
+          "max_bytes": 20971520,
+          "qualifier": "2:3 dashboard view; displays up to 2048 x 3072 on click if no click-through link is set",
+          "detail": [
+            "20MB per image; 10 images per post in the apps, 30 on web"
+          ],
+          "published": true,
+          "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "note": "Medium has no published spec for profile or post-cover dimensions; the platform scales images to fit its display contexts.",
+      "sources": [
+        {
+          "title": "help.medium.com — using images",
+          "url": "https://help.medium.com/hc/en-us/articles/215679797-Using-images"
+        }
+      ],
+      "assets": [
+        {
+          "id": "post-image",
+          "label": "Post Image",
+          "render": "at least 1192 px wide",
+          "min": {
+            "width": 1192
+          },
+          "max_bytes": 26214400,
+          "formats": [
+            "jpg",
+            "jpeg",
+            "gif",
+            "png"
+          ],
+          "qualifier": "below that, the full-width and outset placement options don't appear",
+          "detail": [
+            "Max file size 25MB (.JPG, .JPEG, .GIF, .PNG)"
+          ],
+          "published": true,
+          "source_url": "https://help.medium.com/hc/en-us/articles/215679797-Using-images",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "sources": [
+        {
+          "title": "docs.github.com — repository social preview",
+          "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-picture",
+          "label": "Profile (Identicon) Picture",
+          "render": "500 x 500",
+          "width": 500,
+          "height": 500,
+          "aspect": "1:1",
+          "published": false,
+          "verified": "2026-07-24",
+          "notes": [
+            "GitHub publishes no avatar dimension; 500 x 500 is the generated identicon size."
+          ]
+        },
+        {
+          "id": "social-preview",
+          "label": "Repo Social Preview Image",
+          "render": "1280 x 640",
+          "width": 1280,
+          "height": 640,
+          "aspect": "2:1",
+          "min": {
+            "width": 640,
+            "height": 320
+          },
+          "max_bytes": 1048576,
+          "formats": [
+            "png",
+            "jpg",
+            "gif"
+          ],
+          "qualifier": "640 x 320 min, under 1MB",
+          "published": true,
+          "source_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "note": "help.twitch.tv is a Salesforce app that frequently fails to render for automated checks. The banner and profile picture cap were re-confirmed 2026-07-24; the panel, offline banner, emote and badge values were last confirmed 2026-04-25.",
+      "sources": [
+        {
+          "title": "help.twitch.tv — channel page setup",
+          "url": "https://help.twitch.tv/s/article/channel-page-setup"
+        },
+        {
+          "title": "subscriber emote guide",
+          "url": "https://help.twitch.tv/s/article/subscriber-emote-guide"
+        },
+        {
+          "title": "subscriber badge guide",
+          "url": "https://help.twitch.tv/s/article/subscriber-badge-guide"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-picture",
+          "label": "Profile Picture",
+          "render": "upload 800 x 800",
+          "width": 800,
+          "height": 800,
+          "aspect": "1:1",
+          "max_bytes": 10485760,
+          "qualifier": "max display 256 x 256, 10MB max",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "display",
+              "width": 256,
+              "height": 256,
+              "description": "maximum rendered size"
+            }
+          ]
+        },
+        {
+          "id": "profile-banner",
+          "label": "Profile Banner",
+          "render": "1200 x 480",
+          "width": 1200,
+          "height": 480,
+          "aspect": "5:2",
+          "max_bytes": 3145728,
+          "qualifier": "≤3MB",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "panel",
+          "label": "Panel Images",
+          "render": "320 wide max",
+          "max": {
+            "width": 320,
+            "height": 600
+          },
+          "qualifier": "height up to 600",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
+          "verified": "2026-04-25"
+        },
+        {
+          "id": "offline-banner",
+          "label": "Video Offline Banner",
+          "render": "1920 x 1080",
+          "width": 1920,
+          "height": 1080,
+          "aspect": "16:9",
+          "qualifier": "16:9; 1280 x 720 also accepted",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
+          "verified": "2026-04-25",
+          "also": [
+            {
+              "label": "alternate",
+              "width": 1280,
+              "height": 720,
+              "description": "also accepted"
+            }
+          ]
+        },
+        {
+          "id": "subscriber-emotes",
+          "label": "Subscriber Emoticons",
+          "render": "28 x 28, 56 x 56, 112 x 112",
+          "sizes": [
+            {
+              "width": 28,
+              "height": 28
+            },
+            {
+              "width": 56,
+              "height": 56
+            },
+            {
+              "width": 112,
+              "height": 112
+            }
+          ],
+          "formats": [
+            "png"
+          ],
+          "max_bytes": 524288,
+          "qualifier": "PNG, ≤512KB each, or single 112–4096 px square ≤1MB",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/subscriber-emote-guide",
+          "verified": "2026-04-25"
+        },
+        {
+          "id": "subscriber-badges",
+          "label": "Subscriber Badges",
+          "render": "18 x 18, 36 x 36, 72 x 72",
+          "sizes": [
+            {
+              "width": 18,
+              "height": 18
+            },
+            {
+              "width": 36,
+              "height": 36
+            },
+            {
+              "width": 72,
+              "height": 72
+            }
+          ],
+          "formats": [
+            "png"
+          ],
+          "max_bytes": 25600,
+          "qualifier": "PNG, ≤25KB each",
+          "published": true,
+          "source_url": "https://help.twitch.tv/s/article/subscriber-badge-guide",
+          "verified": "2026-04-25"
+        }
+      ]
+    },
+    {
+      "id": "soundcloud",
+      "name": "SoundCloud",
+      "sources": [
+        {
+          "title": "help.soundcloud.com — update your profile image and header",
+          "url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header"
+        }
+      ],
+      "assets": [
+        {
+          "id": "profile-image",
+          "label": "Profile Image",
+          "render": "square, at least 800 x 800",
+          "min": {
+            "width": 800,
+            "height": 800
+          },
+          "aspect": "1:1",
+          "max_bytes": 2097152,
+          "formats": [
+            "jpg",
+            "png"
+          ],
+          "qualifier": "max 2MB, .jpg or .png",
+          "published": true,
+          "source_url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "track-artwork",
+          "label": "Track Artwork",
+          "render": "1400 x 1400",
+          "width": 1400,
+          "height": 1400,
+          "aspect": "1:1",
+          "qualifier": "SoundCloud's upload guidance, not in the profile doc",
+          "published": false,
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "header",
+          "label": "Profile Header Banner",
+          "render": "at least 2480 x 520",
+          "min": {
+            "width": 2480,
+            "height": 520
+          },
+          "max_bytes": 2097152,
+          "qualifier": "max 2MB — below 1240 x 260 the zoom control is disabled",
+          "published": true,
+          "source_url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header",
+          "verified": "2026-07-24",
+          "also": [
+            {
+              "label": "minimum-for-feature",
+              "width": 1240,
+              "height": 260,
+              "description": "below this the zoom control is disabled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nextdoor",
+      "name": "Nextdoor",
+      "note": "Nextdoor's help article gives only the two values below. The larger figures widely circulated for Nextdoor (500 x 500 profile, 1156 x 650 banner) don't appear in any current first-party doc — use the published sizes.",
+      "sources": [
+        {
+          "title": "help.nextdoor.com — add a banner, photo, or logo to your public agency profile",
+          "url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo"
+        }
+      ],
+      "assets": [
+        {
+          "id": "banner",
+          "label": "Agency / Business Profile Banner",
+          "render": "580 x 180",
+          "width": 580,
+          "height": 180,
+          "published": true,
+          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "logo",
+          "label": "Agency / Business Profile Logo",
+          "render": "120 x 120",
+          "width": 120,
+          "height": 120,
+          "aspect": "1:1",
+          "published": true,
+          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "google-business-profile",
+      "name": "Google Business Profile",
+      "aka": [
+        "Google My Business",
+        "Google Local Business Center"
+      ],
+      "subtitle": "Formerly \"Google My Business\" / \"Google Local Business Center\"",
+      "note": "Google publishes a single set of requirements for logos, cover photos, and additional photos alike. Any per-type dimensions you see elsewhere are convention, not spec.",
+      "sources": [
+        {
+          "title": "support.google.com/business — photos",
+          "url": "https://support.google.com/business/answer/6103862"
+        }
+      ],
+      "assets": [
+        {
+          "id": "logo-and-photos",
+          "label": "Logo & all photos",
+          "render": "720 x 720 recommended",
+          "width": 720,
+          "height": 720,
+          "aspect": "1:1",
+          "min": {
+            "width": 250,
+            "height": 250
+          },
+          "max_bytes": 5242880,
+          "formats": [
+            "jpg",
+            "png"
+          ],
+          "qualifier": "250 x 250 min, 10KB–5MB, JPG or PNG",
+          "published": true,
+          "source_url": "https://support.google.com/business/answer/6103862",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "cover-photo",
+          "label": "Cover Photo",
+          "render": "1024 x 576",
+          "width": 1024,
+          "height": 576,
+          "aspect": "16:9",
+          "qualifier": "16:9 — Google applies one spec to every photo type",
+          "published": false,
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "google-workspace",
+      "name": "Google Workspace (Gmail) Logo",
+      "sources": [
+        {
+          "title": "knowledge.workspace.google.com — add your logo to Google Workspace",
+          "url": "https://knowledge.workspace.google.com/admin/getting-started/add-your-logo-to-google-workspace"
+        }
+      ],
+      "assets": [
+        {
+          "id": "header-logo",
+          "label": "Header Logo",
+          "render": "320 x 132 exact",
+          "width": 320,
+          "height": 132,
+          "formats": [
+            "png",
+            "jpg",
+            "gif"
+          ],
+          "qualifier": "PNG / JPG / GIF, non-animated; renders across Gmail, Calendar, Drive",
+          "published": true,
+          "source_url": "https://knowledge.workspace.google.com/admin/getting-started/add-your-logo-to-google-workspace",
+          "verified": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress Plugin & Theme Dev",
+      "sources": [
+        {
+          "title": "developer.wordpress.org — plugin assets",
+          "url": "https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/"
+        },
+        {
+          "title": "theme structure (screenshot)",
+          "url": "https://developer.wordpress.org/themes/core-concepts/theme-structure/"
+        },
+        {
+          "title": "wordpress.org — customizer (site icon)",
+          "url": "https://wordpress.org/documentation/article/customizer/"
+        }
+      ],
+      "assets": [
+        {
+          "id": "site-icon",
+          "label": "Site Icon (Customizer → Site Identity → Site Icon)",
+          "render": "square, at least 512 x 512",
+          "min": {
+            "width": 512,
+            "height": 512
+          },
+          "aspect": "1:1",
+          "published": true,
+          "source_url": "https://wordpress.org/documentation/article/customizer/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "theme-screenshot",
+          "label": "Theme Screenshot",
+          "render": "1200 x 900",
+          "width": 1200,
+          "height": 900,
+          "aspect": "4:3",
+          "max": {
+            "width": 1200,
+            "height": 900
+          },
+          "formats": [
+            "png",
+            "jpg"
+          ],
+          "qualifier": "`screenshot.png` or `.jpg` in theme root; must not exceed 1200 x 900",
+          "published": true,
+          "source_url": "https://developer.wordpress.org/themes/core-concepts/theme-structure/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "plugin-icons",
+          "label": "Plugin Icons",
+          "render": "256 x 256, and 128 x 128",
+          "sizes": [
+            {
+              "width": 256,
+              "height": 256
+            },
+            {
+              "width": 128,
+              "height": 128
+            }
+          ],
+          "formats": [
+            "png"
+          ],
+          "published": true,
+          "source_url": "https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/",
+          "verified": "2026-07-24"
+        },
+        {
+          "id": "plugin-banners",
+          "label": "Plugin Header Banners",
+          "render": "1544 x 500, and 772 x 250",
+          "sizes": [
+            {
+              "width": 1544,
+              "height": 500
+            },
+            {
+              "width": 772,
+              "height": 250
+            }
+          ],
+          "formats": [
+            "png",
+            "jpg"
+          ],
+          "detail": [
+            "Plugin images go in an `/assets/` directory: `banner-1544x500.png`, `banner-772x250.png`, `icon-128x128.png`, `icon-256x256.png`"
+          ],
+          "published": true,
+          "source_url": "https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/",
+          "verified": "2026-07-24"
+        }
+      ]
+    }
+  ]
+}

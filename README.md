@@ -10,6 +10,33 @@ _Values marked **[unpublished]** are not stated in any first-party doc — they'
 
 ![Social Media Image Sizes Reference Guide](https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/social-media-image-sizes-repo-header.jpg)
 
+## Use it as data
+
+Every size lives in [`data/sizes.json`](data/sizes.json) — the README is generated from it. No signup, no API key, no rate limit:
+
+```
+https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/data/sizes.json
+```
+
+```js
+const res = await fetch('https://raw.githubusercontent.com/chuckreynolds/social-profile-image-sizes/master/data/sizes.json');
+const { platforms } = await res.json();
+
+const bluesky = platforms.find((p) => p.id === 'bluesky');
+const banner = bluesky.assets.find((a) => a.id === 'banner');
+// → { width: 1500, height: 500, aspect: '3:1', published: false, ... }
+```
+
+Each entry carries `width`, `height`, `aspect`, `min`/`max`, `max_bytes`, `formats`, `source_url`, and `verified`. The field that matters most is **`published`** — `false` means the platform documents no such size and the value is an observed convention. Filter on it when you need something you can cite:
+
+```js
+const citable = platforms.flatMap((p) => p.assets).filter((a) => a.published);
+```
+
+Schema: [`data/schema.json`](data/schema.json). Contributing or automating against this? See [AGENTS.md](AGENTS.md).
+
+<!-- BEGIN GENERATED — edit data/sizes.json, then run `npm run build` -->
+
 ## Contents
 
 - [X (formerly Twitter)](#x-formerly-twitter)
@@ -38,10 +65,10 @@ _Values marked **[unpublished]** are not stated in any first-party doc — they'
 * Header Image - 1500 x 500 (~60 px top and bottom can crop depending on monitor/browser)
 * Post Image - 1024 x 512 **[unpublished]** (displays inline as 506 x 253; 1200 x 675 also common for landscape)
 * Article Image - 5:2 ratio, e.g. 1000 x 400 **[unpublished]**
-* Card `twitter:card = summary` - 1:1 (144 x 144 min, 4096 x 4096 max)
-* Card `twitter:card = summary_large_image` - 2:1 ratio (300 x 157 min, 4096 x 4096 max)
+* Card `twitter:card = summary` - 1:1 **[unpublished]** (144 x 144 min, 4096 x 4096 max)
+* Card `twitter:card = summary_large_image` - 2:1 ratio **[unpublished]** (300 x 157 min, 4096 x 4096 max)
 
-_Note: X retired its Cards documentation when developer.x.com moved to docs.x.com — the old deep links now redirect to a generic overview and no replacement spec page exists. The card values above are the last officially published figures and can no longer be confirmed first-party._
+_Note: X retired its Cards documentation when developer.x.com moved to docs.x.com — the old deep links now redirect to a generic overview and no replacement spec page exists. The card values below are the last officially published figures and can no longer be confirmed first-party._
 
 Source: [help.x.com — uploading profile photos and headers and best sizes](https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo)
 
@@ -50,30 +77,30 @@ Source: [help.x.com — uploading profile photos and headers and best sizes](htt
 * Cover Photo - 851 x 315 optimal (400 x 150 min; sRGB JPG under 100KB recommended)
   * _Crops to 16:9 on desktop and 2.4:1 on mobile — keep key content centered_
 * Post Link Image (Open Graph) - 1200 x 630 (1.91:1; 600 x 315 min for the large render, 200 x 200 absolute min, 8MB max)
-* Event Image - 1200 x 628 (1.91:1) **[unpublished]**
-* App Icon - 1024 x 1024 (PNG, for Facebook Login app config)
+* Event Image - 1200 x 628 **[unpublished]**
+* App Icon - 1024 x 1024 **[unpublished]** (PNG, for Facebook Login app config)
 
 Sources: [facebook.com/help — cover photo](https://www.facebook.com/help/125379114252045), [developers.facebook.com — sharing best practices](https://developers.facebook.com/docs/sharing/webmasters/images)
 
 ## Instagram
 * Profile Photo - 320 x 320 **[unpublished]** (displays as circle)
 * Feed Posts - upload at 1080 px wide (Instagram keeps 320–1080 px wide as-is, downsizes anything larger)
-  * Supported aspect range is 1.91:1 to 3:4 — i.e. 1080 x 566 (landscape) through 1080 x 1440 (max portrait)
-  * 1080 x 1350 (4:5) and 1080 x 1080 (1:1) are the common picks; anything outside the range gets cropped
+  * _Supported aspect range is 1.91:1 to 3:4 — i.e. 1080 x 566 (landscape) through 1080 x 1440 (max portrait)_
+  * _1080 x 1350 (4:5) and 1080 x 1080 (1:1) are the common picks; anything outside the range gets cropped_
 * Stories & Reels - 9:16, min 720 px resolution, min 30 FPS (1080 x 1920 standard)
-* Reel Cover Photo - 420 x 654 (1:1.55) — can't be changed after upload
+* Reel Cover Photo - 420 x 654 (1:1.55 — can't be changed after upload)
 * Reel Safe Zone - 1080 x 1420 **[unpublished]** (top/bottom ~250 px overlaid by UI)
 
 Sources: [help.instagram.com — image resolution](https://help.instagram.com/1631821640426723), [Reel size & aspect ratios](https://help.instagram.com/1038071743007909)
 
 ## Threads
-* Profile Picture - 320 x 320 (1:1, syncs from Instagram)
-* Post Image - 1080 x 1350 (4:5 portrait recommended); also 1:1 and 1.91:1
-* Carousel - up to 10 images (≥1080 px wide each)
-* Video - 1080 x 1920 (9:16)
-* Link Preview - 1200 x 600 (2:1)
+* Profile Picture - 320 x 320 **[unpublished]** (1:1, syncs from Instagram)
+* Post Image - 1080 x 1350 **[unpublished]** (4:5 portrait recommended; also 1:1 and 1.91:1)
+* Carousel - up to 10 images **[unpublished]** (≥1080 px wide each)
+* Video - 1080 x 1920 **[unpublished]**
+* Link Preview - 1200 x 600 **[unpublished]**
 
-_Note: Meta hasn't published first-party Threads media specs, so every value above is **[unpublished]** — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior._
+_Note: Meta hasn't published first-party Threads media specs, so every value below is unpublished — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior._
 
 ## LinkedIn
 * Profile Photo - 400 x 400 (268 x 268 min)
@@ -86,36 +113,36 @@ _Note: Meta hasn't published first-party Threads media specs, so every value abo
   * Life Tab Custom Modules - 502 x 282
   * Life Tab Company Photos - 900 x 600 (264 x 176 min)
   * Company Post Images (with link) - 1200 x 627 (1.91:1, 200 px min width)
-  * _All page images: PNG or JPEG, 3MB max — LinkedIn recommends a high-res JPEG over PNG_
+    * _All page images: PNG or JPEG, 3MB max — LinkedIn recommends a high-res JPEG over PNG_
 
 Sources: [linkedin.com/help — profile background](https://www.linkedin.com/help/linkedin/answer/a568217), [company & career pages](https://www.linkedin.com/help/linkedin/answer/a563309)
 
 ## YouTube
 * Profile Picture - displays at 98 x 98 (15MB max; upload 800 x 800 so it stays sharp everywhere)
-* Channel Banner / Cover - 2048 x 1152 min (16:9 ratio); 2560 x 1440 recommended for TV; safe area 1235 x 338; 6MB max
-* Video Thumbnail - 3840 x 2160 recommended (16:9, 640 px min width); 2MB max on mobile, 50MB on desktop
+* Channel Banner / Cover - 2048 x 1152 min (16:9 ratio; 2560 x 1440 recommended for TV; safe area 1235 x 338; 6MB max)
+* Video Thumbnail - 3840 x 2160 recommended (16:9, 640 px min width; 2MB max on mobile, 50MB on desktop)
   * _1:1 for podcast playlists. Vertical videos with 16:9 thumbnails get an auto-generated 4:5 replacement in some surfaces._
-* YouTube Shorts Video - 1080 x 1920 (9:16 ratio)
-* Video Watermark - 150 x 150 min, square, under 1MB
+* YouTube Shorts Video - 1080 x 1920 **[unpublished]**
+* Video Watermark - 150 x 150 min (square, under 1MB)
 
 Sources: [support.google.com/youtube — manage your channel branding](https://support.google.com/youtube/answer/10456525), [video thumbnails](https://support.google.com/youtube/answer/72431)
 
 ## TikTok
-* Profile Photo - 20 x 20 min is the *only* size TikTok publishes; upload 400 x 400 or larger square (displays as circle)
-* Video Feed - 9:16 recommended, 540 x 960 min per TikTok's ad specs; 1080 x 1920 is the practical standard
+* Profile Photo - 20 x 20 min is the *only* size TikTok publishes (upload 400 x 400 or larger square; displays as circle)
+* Video Feed - 9:16 recommended, 540 x 960 min (per TikTok's ad specs; 1080 x 1920 is the practical standard)
   * _Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)_
-* Photo Mode Posts - 1080 x 1920 (9:16); up to 35 photos per post **[unpublished]**
+* Photo Mode Posts - 1080 x 1920 **[unpublished]** (up to 35 photos per post)
 
 Sources: [support.tiktok.com — adding a profile photo](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads)
 
 ## Bluesky
-* Profile Picture - 400 x 400 (1:1)
-* Banner Image - 1500 x 500
-* Post Image - 1080 x 1080 (max 1MB per image)
-* Landscape Link Preview - 1200 x 627 (1.91:1 ratio)
-* Portrait - 627 x 1200 (4:5 ratio)
+* Profile Picture - 400 x 400 **[unpublished]**
+* Banner Image - 1500 x 500 **[unpublished]**
+* Post Image - 1080 x 1080 **[unpublished]** (max 1MB per image)
+* Landscape Link Preview - 1200 x 627 **[unpublished]**
+* Portrait Link Preview - 627 x 1200 **[unpublished]**
 
-_Note: Bluesky publishes no size doc. All values above are **[unpublished]** — derived from the app and ATProto blob limits (1MB per image is the enforced one)._
+_Note: Bluesky publishes no size doc. All values below are unpublished — derived from the app and ATProto blob limits (1MB per image is the enforced one)._
 
 Source: [bsky.app](https://bsky.app/)
 
@@ -123,7 +150,7 @@ Source: [bsky.app](https://bsky.app/)
 * Avatar - downscales to 400 x 400 (max 2MB; WEBP/PNG/GIF/JPG)
 * Header - downscales to 1500 x 500 (max 2MB)
 
-_Note: defaults from the reference Mastodon server software; individual instances can override._
+_Note: Defaults from the reference Mastodon server software; individual instances can override._
 
 Source: [docs.joinmastodon.org — setting up your profile](https://docs.joinmastodon.org/user/profile/)
 
@@ -141,29 +168,29 @@ Sources: [support.reddithelp.com — community icon](https://support.reddithelp.
   * _title: 100 char max — text box: 250 char max — description: up to 800 char (first 50–60 show in feed)_
   * _safe zones: 270 px top, 65 px left, 195 px right, 790 px bottom_
   * _file: BMP / JPEG / PNG / TIFF / WEBP, 20MB max on web_
-* Video Pin - 1080 x 1920 (9:16 ratio); 4 seconds to 5 minutes, H.264 or H.265
-* Board Cover - 600 x 600 (1:1) **[unpublished]**
+* Video Pin - 1080 x 1920 (9:16 ratio; 4 seconds to 5 minutes, H.264 or H.265)
+* Board Cover - 600 x 600 **[unpublished]**
 
 Sources: [business.pinterest.com — creative best practices](https://business.pinterest.com/creative-best-practices/), [help.pinterest.com — pin specs](https://help.pinterest.com/en/article/review-pin-specs)
 
 ## Tumblr
 * Avatar - 128 x 128 (max 10MB; JPEG / PNG / WEBP — GIFs go static)
 * Header Image - 2048 x 1152 (16:9, max 10MB)
-* Post Image - 540 x 810 recommended (2:3 dashboard view); displays up to 2048 x 3072 on click if no click-through link is set
+* Post Image - 540 x 810 recommended (2:3 dashboard view; displays up to 2048 x 3072 on click if no click-through link is set)
   * _20MB per image; 10 images per post in the apps, 30 on web_
 
 Source: [help.tumblr.com — image & GIF troubleshooting](https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/)
 
 ## Medium
 * Post Image - at least 1192 px wide (below that, the full-width and outset placement options don't appear)
-* Max file size - 25MB (.JPG, .JPEG, .GIF, .PNG)
+  * _Max file size 25MB (.JPG, .JPEG, .GIF, .PNG)_
 
 _Note: Medium has no published spec for profile or post-cover dimensions; the platform scales images to fit its display contexts._
 
 Source: [help.medium.com — using images](https://help.medium.com/hc/en-us/articles/215679797-Using-images)
 
 ## GitHub
-* Profile (Identicon) Picture - 500 x 500
+* Profile (Identicon) Picture - 500 x 500 **[unpublished]**
 * Repo Social Preview Image - 1280 x 640 (640 x 320 min, under 1MB)
 
 Source: [docs.github.com — repository social preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
@@ -176,14 +203,14 @@ Source: [docs.github.com — repository social preview](https://docs.github.com/
 * Subscriber Emoticons - 28 x 28, 56 x 56, 112 x 112 (PNG, ≤512KB each, or single 112–4096 px square ≤1MB)
 * Subscriber Badges - 18 x 18, 36 x 36, 72 x 72 (PNG, ≤25KB each)
 
-_Note: help.twitch.tv is a Salesforce app that frequently fails to render for automated checks. The banner (1200 x 480) and 10MB profile picture cap were re-confirmed 2026-07-24; the panel, offline banner, emote and badge values were last confirmed 2026-04-25._
+_Note: help.twitch.tv is a Salesforce app that frequently fails to render for automated checks. The banner and profile picture cap were re-confirmed 2026-07-24; the panel, offline banner, emote and badge values were last confirmed 2026-04-25._
 
 Sources: [help.twitch.tv — channel page setup](https://help.twitch.tv/s/article/channel-page-setup), [subscriber emote guide](https://help.twitch.tv/s/article/subscriber-emote-guide), [subscriber badge guide](https://help.twitch.tv/s/article/subscriber-badge-guide)
 
 ## SoundCloud
 * Profile Image - square, at least 800 x 800 (max 2MB, .jpg or .png)
 * Track Artwork - 1400 x 1400 **[unpublished]** (SoundCloud's upload guidance, not in the profile doc)
-* Profile Header Banner - at least 2480 x 520 (max 2MB) — below 1240 x 260 the zoom control is disabled
+* Profile Header Banner - at least 2480 x 520 (max 2MB — below 1240 x 260 the zoom control is disabled)
 
 Source: [help.soundcloud.com — update your profile image and header](https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header)
 
@@ -191,7 +218,7 @@ Source: [help.soundcloud.com — update your profile image and header](https://h
 * Agency / Business Profile Banner - 580 x 180
 * Agency / Business Profile Logo - 120 x 120
 
-_Note: Nextdoor's help article gives only the two values above. The larger figures widely circulated for Nextdoor (500 x 500 profile, 1156 x 650 banner) don't appear in any current first-party doc — use the published sizes._
+_Note: Nextdoor's help article gives only the two values below. The larger figures widely circulated for Nextdoor (500 x 500 profile, 1156 x 650 banner) don't appear in any current first-party doc — use the published sizes._
 
 Source: [help.nextdoor.com — add a banner, photo, or logo to your public agency profile](https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo)
 
@@ -199,7 +226,7 @@ Source: [help.nextdoor.com — add a banner, photo, or logo to your public agenc
 _Formerly "Google My Business" / "Google Local Business Center"_
 
 * Logo & all photos - 720 x 720 recommended (250 x 250 min, 10KB–5MB, JPG or PNG)
-* Cover Photo - 1024 x 576 (16:9) **[unpublished]** — Google applies one spec to every photo type
+* Cover Photo - 1024 x 576 **[unpublished]** (16:9 — Google applies one spec to every photo type)
 
 _Note: Google publishes a single set of requirements for logos, cover photos, and additional photos alike. Any per-type dimensions you see elsewhere are convention, not spec._
 
@@ -215,10 +242,11 @@ Source: [knowledge.workspace.google.com — add your logo to Google Workspace](h
 * Theme Screenshot - 1200 x 900 (`screenshot.png` or `.jpg` in theme root; must not exceed 1200 x 900)
 * Plugin Icons - 256 x 256, and 128 x 128
 * Plugin Header Banners - 1544 x 500, and 772 x 250
-* _(Plugin images go in an `/assets/` directory: `banner-1544x500.png`, `banner-772x250.png`, `icon-128x128.png`, `icon-256x256.png`)_
+  * _Plugin images go in an `/assets/` directory: `banner-1544x500.png`, `banner-772x250.png`, `icon-128x128.png`, `icon-256x256.png`_
 
 Sources: [developer.wordpress.org — plugin assets](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/), [theme structure (screenshot)](https://developer.wordpress.org/themes/core-concepts/theme-structure/), [wordpress.org — customizer (site icon)](https://wordpress.org/documentation/article/customizer/)
 
+<!-- END GENERATED -->
 ---
 
 ## Why this guide?

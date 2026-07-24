@@ -1,0 +1,65 @@
+name: Size correction or addition
+description: A dimension is wrong, outdated, or missing
+labels: [size]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep this accurate. The one hard requirement is a
+        **first-party source** — the platform's own docs, not a blog post or
+        another size guide.
+
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: e.g. Bluesky, LinkedIn, Twitch
+    validations:
+      required: true
+
+  - type: input
+    id: asset
+    attributes:
+      label: Asset
+      placeholder: e.g. Banner Image, Profile Photo, Post Link Image
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: What the guide says now
+      placeholder: e.g. 1500 x 500 — leave blank if this is a new entry
+
+  - type: input
+    id: correct
+    attributes:
+      label: What it should say
+      placeholder: e.g. 1500 x 500, max 2MB
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: First-party source URL
+      description: The page that literally states this number. Platform docs only.
+      placeholder: https://help.example.com/article/image-sizes
+    validations:
+      required: true
+
+  - type: textarea
+    id: quote
+    attributes:
+      label: Quote the relevant line
+      description: Paste the sentence stating the size, so it can be checked even if the page later moves.
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: unpublished
+    attributes:
+      label: If there's no first-party source
+      options:
+        - label: The platform doesn't publish this size — record it as unpublished

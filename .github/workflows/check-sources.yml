@@ -1,0 +1,95 @@
+name: Check sources
+
+# Platforms move and retire their docs without notice. This walks every
+# source URL weekly and opens (or updates) a single issue when something
+# needs a human. It never edits data — a dead link means the size needs
+# re-verifying by a person, not auto-patching.
+
+on:
+  schedule:
+    - cron: '0 14 * * 1' # Mondays, 14:00 UTC
+  workflow_dispatch:
+    inputs:
+      max_age_days:
+        description: 'Flag entries not verified in this many days'
+        required: false
+        default: '90'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check source URLs
+        id: check
+        continue-on-error: true
+        run: |
+          node scripts/check-sources.js \
+            --max-age "${{ github.event.inputs.max_age_days || '90' }}" \
+            > report.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          cat report.txt
+
+      - name: Open or update the tracking issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.txt', 'utf8');
+
+            // Only bother a human when something actionable turned up.
+            const actionable = /^(DEAD|MOVED)/m.test(report) || /^STALE/m.test(report);
+            if (!actionable) {
+              core.info('No dead, moved, or stale sources. Nothing to report.');
+              return;
+            }
+
+            const title = 'Source check: links or entries need attention';
+            const body = [
+              'The weekly source check found something that needs a human.',
+              '',
+              '- **DEAD** — the doc is gone. Find the replacement, update `data/sizes.json`, rerun `npm run build`.',
+              '- **MOVED** — the URL redirects elsewhere. Confirm the numbers still match, then update the URL.',
+              '- **STALE** — not re-verified recently. Open the source and confirm.',
+              '- **BLOCKED / UNREACHABLE** — inconclusive. These hosts refuse bots; check them in a browser.',
+              '',
+              '```',
+              report.trim(),
+              '```',
+              '',
+              `_Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}_`,
+            ].join('\n');
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'source-check',
+            });
+
+            if (existing.data.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data[0].number,
+                body,
+              });
+              core.info(`Commented on #${existing.data[0].number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['source-check'],
+              });
+              core.info(`Opened #${created.data.number}`);
+            }

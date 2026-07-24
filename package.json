@@ -1,0 +1,26 @@
+{
+  "name": "social-profile-image-sizes",
+  "version": "1.0.0",
+  "description": "Sourced, machine-readable social media image and video dimensions.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuckreynolds/social-profile-image-sizes.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build-readme.js",
+    "validate": "node scripts/validate.js && node scripts/build-readme.js --check",
+    "check-sources": "node scripts/check-sources.js",
+    "test": "npm run validate"
+  },
+  "keywords": [
+    "social-media",
+    "image-sizes",
+    "dimensions",
+    "reference",
+    "open-graph"
+  ]
+}
