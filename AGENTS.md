@@ -98,6 +98,22 @@ Non-negotiable fields:
 One platform per issue. A single issue proposing eleven changes across six
 platforms is unreviewable.
 
+### What happens when you file
+
+CI triages the issue automatically and comments with what it found. It:
+
+- validates your proposed JSON against the same rules as `npm run validate`
+- fetches the URL you cited
+- **checks your quoted line actually appears on that page**
+- checks the proposed dimensions appear on the page at all
+
+It re-runs on every edit, so you can fix an issue and watch the report update
+rather than waiting on a maintainer. If the host bot-blocks, the check says so
+and defers to a human — it won't hold that against you.
+
+The quote check is the one to care about. A fabricated quote fails it
+immediately, which is the point.
+
 ### What gets closed
 
 - Numbers with no source, or with a source that doesn't state the number.
