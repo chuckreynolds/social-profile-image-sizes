@@ -15,6 +15,18 @@ If you're comfortable with markdown, send a [Pull Request] directly. Same sourci
 
 If neither of those is your thing, just [DM me on X] and lmk what needs fixing.
 
+## Using an agent?
+
+Fine by me — the data is structured so agents can work with it. But point it at
+[AGENTS.md](AGENTS.md) first, and use the [agent-submitted size change](.github/ISSUE_TEMPLATE/agent-proposal.md)
+template so I can tell agent reports apart from human ones.
+
+The rule that matters: **an agent must not propose a size it didn't read on a
+first-party page.** Every issue needs the URL it actually fetched, the date, and
+a verbatim quote of the line stating the number. Models are good at producing
+plausible dimensions, and a plausible wrong number is the exact failure this
+repo exists to prevent. Reports without a quote get closed.
+
 ## What stays in / out
 
 - Sizes must come from a first-party source. If a platform doesn't publish a spec, that gets noted inline.
