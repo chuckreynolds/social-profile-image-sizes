@@ -4,7 +4,7 @@
     "title": "Social Media Image Sizes Reference Guide",
     "repository": "https://github.com/chuckreynolds/social-profile-image-sizes",
     "license": "MIT",
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-08-03",
     "units": "pixels",
     "about_published_flag": "published:false means the platform states no such size in any first-party documentation. The value is an observed convention that generally renders well, but it cannot be cited and may drift."
   },
@@ -620,8 +620,8 @@
       "name": "TikTok",
       "sources": [
         {
-          "title": "support.tiktok.com — adding a profile photo",
-          "url": "https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video"
+          "title": "tiktok.com — adding a profile photo",
+          "url": "https://www.tiktok.com/support/faq_detail?id=7581821549855038008"
         },
         {
           "title": "ads.tiktok.com — in-feed ad video specifications",
@@ -640,8 +640,8 @@
           "aspect": "1:1",
           "qualifier": "upload 400 x 400 or larger square; displays as circle",
           "published": true,
-          "source_url": "https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video",
-          "verified": "2026-07-24",
+          "source_url": "https://www.tiktok.com/support/faq_detail?id=7581821549855038008",
+          "verified": "2026-08-03",
           "also": [
             {
               "label": "alternate",
@@ -1094,7 +1094,7 @@
     {
       "id": "twitch",
       "name": "Twitch",
-      "note": "help.twitch.tv is a Salesforce app that frequently fails to render for automated checks. The banner and profile picture cap were re-confirmed 2026-07-24; the panel, offline banner, emote and badge values were last confirmed 2026-04-25.",
+      "note": "help.twitch.tv is a Salesforce app that frequently fails to render for automated checks; read it in a browser. Re-read in full 2026-08-03: the channel setup article now states dimensions only for the profile banner and info panels. The profile picture and video player banner sizes it used to carry are gone, so those are marked unpublished.",
       "sources": [
         {
           "title": "help.twitch.tv — channel page setup",
@@ -1103,6 +1103,10 @@
         {
           "title": "subscriber emote guide",
           "url": "https://help.twitch.tv/s/article/subscriber-emote-guide"
+        },
+        {
+          "title": "emote formatting & instant emote upload requirements",
+          "url": "https://help.twitch.tv/s/article/emote-guidelines"
         },
         {
           "title": "subscriber badge guide",
@@ -1119,9 +1123,11 @@
           "aspect": "1:1",
           "max_bytes": 10485760,
           "qualifier": "max display 256 x 256, 10MB max",
-          "published": true,
-          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-07-24",
+          "published": false,
+          "verified": "2026-08-03",
+          "notes": [
+            "The channel setup article no longer states any profile picture dimensions. As of 2026-08-03 it says only: \"Must be JPEG, PNG, or GIF and cannot exceed 10MB.\" The 800 x 800 upload and 256 x 256 display figures are long-standing convention that Twitch no longer documents."
+          ],
           "also": [
             {
               "label": "display",
@@ -1138,24 +1144,26 @@
           "width": 1200,
           "height": 480,
           "aspect": "5:2",
-          "max_bytes": 3145728,
-          "qualifier": "≤3MB",
+          "qualifier": "scales to browser width; images are scaled to 480 high, so keep the artwork weighted left",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-07-24"
+          "verified": "2026-08-03",
+          "notes": [
+            "The 3MB cap previously recorded here is not stated in the article and was dropped 2026-08-03. The article gives the dimension only: \"The recommended size for a profile banner is 1200x480px.\""
+          ]
         },
         {
           "id": "panel",
           "label": "Panel Images",
-          "render": "320 wide max",
+          "render": "320 x 300 max",
           "max": {
             "width": 320,
-            "height": 600
+            "height": 300
           },
-          "qualifier": "height up to 600",
+          "qualifier": "under 2.9MB; larger images are resized to these maximums automatically",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-04-25"
+          "verified": "2026-08-03"
         },
         {
           "id": "offline-banner",
@@ -1165,9 +1173,11 @@
           "height": 1080,
           "aspect": "16:9",
           "qualifier": "16:9; 1280 x 720 also accepted",
-          "published": true,
-          "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-04-25",
+          "published": false,
+          "verified": "2026-08-03",
+          "notes": [
+            "Twitch documents no size for this. The channel setup article's \"Upload a Video Player Banner\" section gives steps only — and as of 2026-08-03 those steps are duplicated from the accent-colour section above it, so the article appears to have lost its banner instructions entirely. 1920 x 1080 remains the sensible upload size; it just cannot be cited."
+          ],
           "also": [
             {
               "label": "alternate",
@@ -1198,11 +1208,17 @@
           "formats": [
             "png"
           ],
-          "max_bytes": 524288,
-          "qualifier": "PNG, ≤512KB each, or single 112–4096 px square ≤1MB",
+          "max_bytes": 102400,
+          "qualifier": "PNG, under 100KB each in manual mode, or a single 112–4096 px square PNG under 1MB with auto-resize",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/subscriber-emote-guide",
-          "verified": "2026-04-25"
+          "verified": "2026-08-03",
+          "detail": [
+            "PNG format and the 112–4096 px auto-resize range come from the Emote Guidelines article; animated emotes are GIF, with a 512KB per-file cap in manual mode."
+          ],
+          "notes": [
+            "Corrected 2026-08-03: this entry recorded a 512KB per-file cap, which is the animated-GIF figure. For standard emotes the guide states the three manual-mode files \"must each be under 100KB\"."
+          ]
         },
         {
           "id": "subscriber-badges",
@@ -1229,7 +1245,7 @@
           "qualifier": "PNG, ≤25KB each",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/subscriber-badge-guide",
-          "verified": "2026-04-25"
+          "verified": "2026-08-03"
         }
       ]
     },

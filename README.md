@@ -133,7 +133,7 @@ Sources: [support.google.com/youtube — manage your channel branding](https://s
   * _Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)_
 * Photo Mode Posts - 1080 x 1920 **[unpublished]** (up to 35 photos per post)
 
-Sources: [support.tiktok.com — adding a profile photo](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads)
+Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/faq_detail?id=7581821549855038008), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads)
 
 ## Bluesky
 * Profile Picture - 400 x 400 **[unpublished]**
@@ -196,16 +196,17 @@ Source: [help.medium.com — using images](https://help.medium.com/hc/en-us/arti
 Source: [docs.github.com — repository social preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
 
 ## Twitch
-* Profile Picture - upload 800 x 800 (max display 256 x 256, 10MB max)
-* Profile Banner - 1200 x 480 (≤3MB)
-* Panel Images - 320 wide max (height up to 600)
-* Video Offline Banner - 1920 x 1080 (16:9; 1280 x 720 also accepted)
-* Subscriber Emoticons - 28 x 28, 56 x 56, 112 x 112 (PNG, ≤512KB each, or single 112–4096 px square ≤1MB)
+* Profile Picture - upload 800 x 800 **[unpublished]** (max display 256 x 256, 10MB max)
+* Profile Banner - 1200 x 480 (scales to browser width; images are scaled to 480 high, so keep the artwork weighted left)
+* Panel Images - 320 x 300 max (under 2.9MB; larger images are resized to these maximums automatically)
+* Video Offline Banner - 1920 x 1080 **[unpublished]** (16:9; 1280 x 720 also accepted)
+* Subscriber Emoticons - 28 x 28, 56 x 56, 112 x 112 (PNG, under 100KB each in manual mode, or a single 112–4096 px square PNG under 1MB with auto-resize)
+  * _PNG format and the 112–4096 px auto-resize range come from the Emote Guidelines article; animated emotes are GIF, with a 512KB per-file cap in manual mode._
 * Subscriber Badges - 18 x 18, 36 x 36, 72 x 72 (PNG, ≤25KB each)
 
-_Note: help.twitch.tv is a Salesforce app that frequently fails to render for automated checks. The banner and profile picture cap were re-confirmed 2026-07-24; the panel, offline banner, emote and badge values were last confirmed 2026-04-25._
+_Note: help.twitch.tv is a Salesforce app that frequently fails to render for automated checks; read it in a browser. Re-read in full 2026-08-03: the channel setup article now states dimensions only for the profile banner and info panels. The profile picture and video player banner sizes it used to carry are gone, so those are marked unpublished._
 
-Sources: [help.twitch.tv — channel page setup](https://help.twitch.tv/s/article/channel-page-setup), [subscriber emote guide](https://help.twitch.tv/s/article/subscriber-emote-guide), [subscriber badge guide](https://help.twitch.tv/s/article/subscriber-badge-guide)
+Sources: [help.twitch.tv — channel page setup](https://help.twitch.tv/s/article/channel-page-setup), [subscriber emote guide](https://help.twitch.tv/s/article/subscriber-emote-guide), [emote formatting & instant emote upload requirements](https://help.twitch.tv/s/article/emote-guidelines), [subscriber badge guide](https://help.twitch.tv/s/article/subscriber-badge-guide)
 
 ## SoundCloud
 * Profile Image - square, at least 800 x 800 (max 2MB, .jpg or .png)
