@@ -4,7 +4,7 @@ An always up-to-date quick reference for social media image and video dimensions
 
 [Contributing]: https://github.com/chuckreynolds/social-profile-image-sizes/blob/master/CONTRIBUTING.md
 
-_Last verified: 2026-07-24_
+_Last verified: 2026-08-24_
 
 _Values marked **[unpublished]** are not stated in any first-party doc — they're community/observed conventions. Everything else is quoted from the linked source._
 

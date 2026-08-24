@@ -81,12 +81,15 @@ function main() {
   }
 
   const generated = build(data);
-  const next =
+  const next = (
     readme.slice(0, start + BEGIN.length) +
     '\n\n' +
     generated +
     '\n\n' +
-    readme.slice(end);
+    readme.slice(end)
+  // The date lives above the generated block, so it drifted silently until
+  // this line owned it. meta.last_verified is the only source for it.
+  ).replace(/^_Last verified: .*_$/m, `_Last verified: ${data.meta.last_verified}_`);
 
   if (check) {
     if (next !== readme) {
