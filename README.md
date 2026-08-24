@@ -133,7 +133,7 @@ Sources: [support.google.com/youtube — manage your channel branding](https://s
   * _Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)_
 * Photo Mode Posts - 1080 x 1920 **[unpublished]** (up to 35 photos per post)
 
-Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/faq_detail?id=7581821549855038008), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads)
+Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/faq_detail?id=7581821549855038008), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads)
 
 ## Bluesky
 * Profile Picture - 400 x 400 **[unpublished]**
@@ -221,7 +221,7 @@ Source: [help.soundcloud.com — update your profile image and header](https://h
 
 _Note: Nextdoor's help article gives only the two values below. The larger figures widely circulated for Nextdoor (500 x 500 profile, 1156 x 650 banner) don't appear in any current first-party doc — use the published sizes._
 
-Source: [help.nextdoor.com — add a banner, photo, or logo to your public agency profile](https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo)
+Source: [help.nextdoor.com — add a banner, photo, or logo to your public agency profile](https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US)
 
 ## Google Business Profile
 _Formerly "Google My Business" / "Google Local Business Center"_

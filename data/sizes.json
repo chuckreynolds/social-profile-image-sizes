@@ -4,7 +4,7 @@
     "title": "Social Media Image Sizes Reference Guide",
     "repository": "https://github.com/chuckreynolds/social-profile-image-sizes",
     "license": "MIT",
-    "last_verified": "2026-08-03",
+    "last_verified": "2026-08-24",
     "units": "pixels",
     "about_published_flag": "published:false means the platform states no such size in any first-party documentation. The value is an observed convention that generally renders well, but it cannot be cited and may drift."
   },
@@ -625,7 +625,7 @@
         },
         {
           "title": "ads.tiktok.com — in-feed ad video specifications",
-          "url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads"
+          "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads"
         }
       ],
       "assets": [
@@ -667,8 +667,8 @@
             "Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)"
           ],
           "published": true,
-          "source_url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads",
-          "verified": "2026-07-24"
+          "source_url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads",
+          "verified": "2026-08-24"
         },
         {
           "id": "photo-mode",
@@ -1320,7 +1320,7 @@
       "sources": [
         {
           "title": "help.nextdoor.com — add a banner, photo, or logo to your public agency profile",
-          "url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo"
+          "url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US"
         }
       ],
       "assets": [
@@ -1331,7 +1331,7 @@
           "width": 580,
           "height": 180,
           "published": true,
-          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo",
+          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US",
           "verified": "2026-07-24"
         },
         {
@@ -1342,7 +1342,7 @@
           "height": 120,
           "aspect": "1:1",
           "published": true,
-          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo",
+          "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US",
           "verified": "2026-07-24"
         }
       ]

@@ -1,13 +1,13 @@
 name: Check sources
 
 # Platforms move and retire their docs without notice. This walks every
-# source URL weekly and opens (or updates) a single issue when something
+# source URL monthly and opens (or updates) a single issue when something
 # needs a human. It never edits data — a dead link means the size needs
 # re-verifying by a person, not auto-patching.
 
 on:
   schedule:
-    - cron: '0 14 * * 1' # Mondays, 14:00 UTC
+    - cron: '0 14 1 * *' # 1st of the month, 14:00 UTC
   workflow_dispatch:
     inputs:
       max_age_days:
@@ -54,7 +54,7 @@ jobs:
 
             const title = 'Source check: links or entries need attention';
             const body = [
-              'The weekly source check found something that needs a human.',
+              'The monthly source check found something that needs a human.',
               '',
               '- **DEAD** — the doc is gone. Find the replacement, update `data/sizes.json`, rerun `npm run build`.',
               '- **MOVED** — the URL redirects elsewhere. Confirm the numbers still match, then update the URL.',

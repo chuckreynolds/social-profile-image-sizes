@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   triage:
-    # Only size-related issues, and never our own weekly source-check issue.
+    # Only size-related issues, and never our own monthly source-check issue.
     if: >-
       contains(join(github.event.issue.labels.*.name, ','), 'size') &&
       !contains(join(github.event.issue.labels.*.name, ','), 'source-check')

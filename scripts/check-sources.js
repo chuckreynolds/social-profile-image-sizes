@@ -4,9 +4,9 @@
 /**
  * Checks every source URL in data/sizes.json and reports:
  *
- *   DEAD        404/410, or an error status from a host that doesn't bot-block
+ *   DEAD        404/410, or an error status from a host that answers bots
  *   MOVED       redirected to a different path — the doc probably moved
- *   BLOCKED     403/400 from a host known to refuse bots (needs a human)
+ *   BLOCKED     a host known to need a browser refused us (needs a human)
  *   UNREACHABLE transport-level failure: TLS chain, DNS, timeout
  *   STALE       entry hasn't been re-verified in --max-age days
  *   OK          reachable, same URL
@@ -25,8 +25,13 @@ const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ' +
   '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 
-/** Hosts that bot-block. A non-2xx from these is inconclusive, not fatal. */
-const BOT_BLOCKING_HOSTS = [
+/**
+ * Hosts a plain HTTP client can't check. Two flavours, same conclusion:
+ * most refuse bots outright (403/400), and help.nextdoor.com serves an
+ * incomplete cert chain that Node rejects and browsers accept. Either way
+ * the result is inconclusive, not fatal — a human opens the page.
+ */
+const NEEDS_A_BROWSER = [
   'help.x.com',
   'developer.x.com',
   'docs.x.com',
@@ -43,6 +48,7 @@ const BOT_BLOCKING_HOSTS = [
   'www.tiktok.com',
   'business.pinterest.com',
   'help.pinterest.com',
+  'help.nextdoor.com', // incomplete cert chain, not a bot block
 ];
 
 const TIMEOUT_MS = 25000;
@@ -52,9 +58,9 @@ function arg(name, fallback) {
   return i === -1 ? fallback : process.argv[i + 1];
 }
 
-function isBotBlocking(url) {
+function needsABrowser(url) {
   try {
-    return BOT_BLOCKING_HOSTS.includes(new URL(url).host);
+    return NEEDS_A_BROWSER.includes(new URL(url).host);
   } catch {
     return false;
   }
@@ -90,7 +96,7 @@ async function checkUrl(url) {
       return { status: 'DEAD', code: res.status, final: res.url };
     }
     if (!res.ok) {
-      return isBotBlocking(url)
+      return needsABrowser(url)
         ? { status: 'BLOCKED', code: res.status, final: res.url }
         : { status: 'DEAD', code: res.status, final: res.url };
     }
@@ -99,10 +105,12 @@ async function checkUrl(url) {
     }
     return { status: 'OK', code: res.status, final: res.url };
   } catch (err) {
-    // Transport failures are inconclusive: help.nextdoor.com serves an
-    // incomplete cert chain that Node rejects and browsers accept. Report
-    // it loudly, but don't call a live page dead.
-    return { status: 'UNREACHABLE', code: 0, final: url, error: err.message };
+    // A transport failure never proves the page is gone, and for the hosts
+    // we already know need a browser it proves nothing at all.
+    const reason = err.cause?.code || err.message;
+    return needsABrowser(url)
+      ? { status: 'BLOCKED', code: 0, final: url, error: reason }
+      : { status: 'UNREACHABLE', code: 0, final: url, error: reason };
   } finally {
     clearTimeout(timer);
   }
@@ -160,7 +168,7 @@ async function main() {
       if (r.status === 'DEAD' || r.status === 'MOVED') {
         console.log(`              cited by: ${r.cited.join(', ')}`);
       }
-      if (r.status === 'UNREACHABLE') {
+      if (r.error) {
         console.log(`              ${r.error}`);
       }
     }
