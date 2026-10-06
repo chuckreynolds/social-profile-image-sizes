@@ -4,7 +4,7 @@ An always up-to-date quick reference for social media image and video dimensions
 
 [Contributing]: https://github.com/chuckreynolds/social-profile-image-sizes/blob/master/CONTRIBUTING.md
 
-_Last verified: 2026-08-24_
+_Last verified: 2026-10-06_
 
 _Values marked **[unpublished]** are not stated in any first-party doc — they're community/observed conventions. Everything else is quoted from the linked source._
 
@@ -105,6 +105,9 @@ _Note: Meta hasn't published first-party Threads media specs, so every value bel
 ## LinkedIn
 * Profile Photo - 400 x 400 (268 x 268 min)
 * Profile Background - 1584 x 396
+* Link Preview (Open Graph og:image) - at least 1200 x 627 (1.91:1 recommended, 5MB max)
+  * _Images less than 401 px wide display as a thumbnail_
+  * _No file types are published for the sharing module_
 
   **LinkedIn Company / Career pages**
   * Logo - 400 x 400 (268 x 268 min)
@@ -115,7 +118,7 @@ _Note: Meta hasn't published first-party Threads media specs, so every value bel
   * Company Post Images (with link) - 1200 x 627 (1.91:1, 200 px min width)
     * _All page images: PNG or JPEG, 3MB max — LinkedIn recommends a high-res JPEG over PNG_
 
-Sources: [linkedin.com/help — profile background](https://www.linkedin.com/help/linkedin/answer/a568217), [company & career pages](https://www.linkedin.com/help/linkedin/answer/a563309)
+Sources: [linkedin.com/help — profile background](https://www.linkedin.com/help/linkedin/answer/a568217), [company & career pages](https://www.linkedin.com/help/linkedin/answer/a563309), [make your website shareable (link previews)](https://www.linkedin.com/help/linkedin/answer/46687)
 
 ## YouTube
 * Profile Picture - displays at 98 x 98 (15MB max; upload 800 x 800 so it stays sharp everywhere)
@@ -138,13 +141,16 @@ Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/
 ## Bluesky
 * Profile Picture - 400 x 400 **[unpublished]**
 * Banner Image - 1500 x 500 **[unpublished]**
-* Post Image - 1080 x 1080 **[unpublished]** (max 1MB per image)
+* Post Image - 1080 x 1080 **[unpublished]** (max 2MB per image)
+  * _Any image type, 2,000,000 bytes max (AT Protocol lexicon; formerly 1MB)_
 * Landscape Link Preview - 1200 x 627 **[unpublished]**
+  * _Thumbnail: any image type, 1,000,000 bytes max (AT Protocol lexicon)_
 * Portrait Link Preview - 627 x 1200 **[unpublished]**
+  * _Thumbnail: any image type, 1,000,000 bytes max (AT Protocol lexicon)_
 
-_Note: Bluesky publishes no size doc. All values below are unpublished — derived from the app and ATProto blob limits (1MB per image is the enforced one)._
+_Note: Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both._
 
-Source: [bsky.app](https://bsky.app/)
+Sources: [bsky.app](https://bsky.app/), [AT Protocol lexicon - app.bsky.embed.external (link card)](https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/external.json), [AT Protocol lexicon - app.bsky.embed.images (post images)](https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/images.json)
 
 ## Mastodon
 * Avatar - downscales to 400 x 400 (max 2MB; WEBP/PNG/GIF/JPG)

@@ -4,7 +4,7 @@
     "title": "Social Media Image Sizes Reference Guide",
     "repository": "https://github.com/chuckreynolds/social-profile-image-sizes",
     "license": "MIT",
-    "last_verified": "2026-08-24",
+    "last_verified": "2026-10-06",
     "units": "pixels",
     "about_published_flag": "published:false means the platform states no such size in any first-party documentation. The value is an observed convention that generally renders well, but it cannot be cited and may drift."
   },
@@ -376,6 +376,10 @@
         {
           "title": "company & career pages",
           "url": "https://www.linkedin.com/help/linkedin/answer/a563309"
+        },
+        {
+          "title": "make your website shareable (link previews)",
+          "url": "https://www.linkedin.com/help/linkedin/answer/46687"
         }
       ],
       "assets": [
@@ -405,6 +409,25 @@
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a568217",
           "verified": "2026-07-24"
+        },
+        {
+          "id": "link-preview",
+          "label": "Link Preview (Open Graph og:image)",
+          "render": "at least 1200 x 627",
+          "min": {
+            "width": 1200,
+            "height": 627
+          },
+          "aspect": "1.91:1",
+          "max_bytes": 5242880,
+          "qualifier": "1.91:1 recommended, 5MB max",
+          "detail": [
+            "Images less than 401 px wide display as a thumbnail",
+            "No file types are published for the sharing module"
+          ],
+          "published": true,
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/46687",
+          "verified": "2026-10-06"
         },
         {
           "id": "company-logo",
@@ -686,11 +709,19 @@
     {
       "id": "bluesky",
       "name": "Bluesky",
-      "note": "Bluesky publishes no size doc. All values below are unpublished — derived from the app and ATProto blob limits (1MB per image is the enforced one).",
+      "note": "Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both.",
       "sources": [
         {
           "title": "bsky.app",
           "url": "https://bsky.app/"
+        },
+        {
+          "title": "AT Protocol lexicon - app.bsky.embed.external (link card)",
+          "url": "https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/external.json"
+        },
+        {
+          "title": "AT Protocol lexicon - app.bsky.embed.images (post images)",
+          "url": "https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/images.json"
         }
       ],
       "assets": [
@@ -721,12 +752,15 @@
           "width": 1080,
           "height": 1080,
           "aspect": "1:1",
-          "max_bytes": 1048576,
-          "qualifier": "max 1MB per image",
+          "max_bytes": 2000000,
+          "qualifier": "max 2MB per image",
+          "detail": [
+            "Any image type, 2,000,000 bytes max (AT Protocol lexicon; formerly 1MB)"
+          ],
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-10-06",
           "notes": [
-            "The 1MB cap is enforced by ATProto and is the one hard limit here."
+            "Dimensions are unpublished. max_bytes and accepted types come from app.bsky.embed.images#image.image (accept image/*, maxSize 2000000), whose description says it was formerly limited to 1 MB."
           ]
         },
         {
@@ -736,8 +770,15 @@
           "width": 1200,
           "height": 627,
           "aspect": "1.91:1",
+          "max_bytes": 1000000,
+          "detail": [
+            "Thumbnail: any image type, 1,000,000 bytes max (AT Protocol lexicon)"
+          ],
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-10-06",
+          "notes": [
+            "Dimensions are unpublished. max_bytes and accepted types come from app.bsky.embed.external#external.thumb (accept image/*, maxSize 1000000)."
+          ]
         },
         {
           "id": "link-preview-portrait",
@@ -746,8 +787,15 @@
           "width": 627,
           "height": 1200,
           "aspect": "1:1.91",
+          "max_bytes": 1000000,
+          "detail": [
+            "Thumbnail: any image type, 1,000,000 bytes max (AT Protocol lexicon)"
+          ],
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-10-06",
+          "notes": [
+            "Dimensions are unpublished. max_bytes and accepted types come from app.bsky.embed.external#external.thumb (accept image/*, maxSize 1000000)."
+          ]
         }
       ]
     },
