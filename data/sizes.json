@@ -4,7 +4,7 @@
     "title": "Social Media Image Sizes Reference Guide",
     "repository": "https://github.com/chuckreynolds/social-profile-image-sizes",
     "license": "MIT",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-11-02",
     "units": "pixels",
     "about_published_flag": "published:false means the platform states no such size in any first-party documentation. The value is an observed convention that generally renders well, but it cannot be cited and may drift."
   },
@@ -36,10 +36,10 @@
             "gif",
             "png"
           ],
-          "qualifier": "max 2MB; JPEG / GIF / PNG, no animated GIFs",
+          "qualifier": "max 2MB; JPEG / GIF / PNG",
           "published": true,
           "source_url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "header",
@@ -51,7 +51,7 @@
           "qualifier": "~60 px top and bottom can crop depending on monitor/browser",
           "published": true,
           "source_url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "post-image",
@@ -135,12 +135,12 @@
       "name": "Facebook",
       "sources": [
         {
-          "title": "facebook.com/help — cover photo",
+          "title": "facebook.com/help - Page profile picture and cover photo dimensions",
           "url": "https://www.facebook.com/help/125379114252045"
         },
         {
           "title": "developers.facebook.com — sharing best practices",
-          "url": "https://developers.facebook.com/docs/sharing/webmasters/images"
+          "url": "https://developers.facebook.com/documentation/sharing/webmasters/images"
         }
       ],
       "assets": [
@@ -151,9 +151,24 @@
           "width": 320,
           "height": 320,
           "aspect": "1:1",
-          "qualifier": "displays as a circle; Facebook no longer states a size",
-          "published": false,
-          "verified": "2026-07-24"
+          "qualifier": "cropped to a circle; displays at 176 x 176 on computers, 196 x 196 on smartphones",
+          "published": true,
+          "verified": "2026-11-02",
+          "source_url": "https://www.facebook.com/help/125379114252045",
+          "also": [
+            {
+              "label": "display",
+              "width": 176,
+              "height": 176,
+              "description": "rendered on the Page on computers"
+            },
+            {
+              "label": "display",
+              "width": 196,
+              "height": 196,
+              "description": "rendered on the Page on smartphones"
+            }
+          ]
         },
         {
           "id": "cover-photo",
@@ -175,7 +190,7 @@
           ],
           "published": true,
           "source_url": "https://www.facebook.com/help/125379114252045",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "open-graph",
@@ -191,8 +206,8 @@
           "max_bytes": 8388608,
           "qualifier": "1.91:1; 600 x 315 min for the large render, 200 x 200 absolute min, 8MB max",
           "published": true,
-          "source_url": "https://developers.facebook.com/docs/sharing/webmasters/images",
-          "verified": "2026-07-24",
+          "source_url": "https://developers.facebook.com/documentation/sharing/webmasters/images",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "minimum-for-feature",
@@ -268,7 +283,7 @@
           ],
           "published": true,
           "source_url": "https://help.instagram.com/1631821640426723",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "stories-reels",
@@ -280,7 +295,10 @@
           "qualifier": "1080 x 1920 standard",
           "published": true,
           "source_url": "https://help.instagram.com/1038071743007909",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "detail": [
+            "Instagram accepts reels from 1.91:1 to 9:16; 9:16 fills the screen"
+          ]
         },
         {
           "id": "reel-cover",
@@ -292,7 +310,7 @@
           "qualifier": "1:1.55 — can't be changed after upload",
           "published": true,
           "source_url": "https://help.instagram.com/1038071743007909",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "reel-safe-zone",
@@ -379,25 +397,39 @@
         },
         {
           "title": "make your website shareable (link previews)",
-          "url": "https://www.linkedin.com/help/linkedin/answer/46687"
+          "url": "https://www.linkedin.com/help/linkedin/answer/a521928/"
+        },
+        {
+          "title": "linkedin.com/help - photo won't upload to your profile (profile photo limits)",
+          "url": "https://www.linkedin.com/help/linkedin/answer/a549049/"
         }
       ],
       "assets": [
         {
           "id": "profile-photo",
           "label": "Profile Photo",
-          "render": "400 x 400",
-          "width": 400,
-          "height": 400,
+          "render": "at least 400 x 400",
           "aspect": "1:1",
           "min": {
-            "width": 268,
-            "height": 268
+            "width": 400,
+            "height": 400
           },
-          "qualifier": "268 x 268 min",
+          "max": {
+            "width": 7680,
+            "height": 4320
+          },
+          "max_bytes": 8388608,
+          "formats": [
+            "png",
+            "jpg"
+          ],
+          "qualifier": "up to 7680 x 4320, 8MB max; PNG or JPG, no GIFs",
+          "notes": [
+            "Previously cited the LinkedIn Pages article (a563309) with 268 x 268 min, which is the Page logo spec, not the member profile photo. Corrected 2026-11-02 from answer a549049."
+          ],
           "published": true,
-          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a549049/",
+          "verified": "2026-11-02"
         },
         {
           "id": "profile-background",
@@ -408,7 +440,13 @@
           "aspect": "4:1",
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a568217",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 8388608,
+          "formats": [
+            "jpg",
+            "png"
+          ],
+          "qualifier": "JPG or PNG, under 8MB"
         },
         {
           "id": "link-preview",
@@ -426,8 +464,8 @@
             "No file types are published for the sharing module"
           ],
           "published": true,
-          "source_url": "https://www.linkedin.com/help/linkedin/answer/46687",
-          "verified": "2026-10-06"
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a521928/",
+          "verified": "2026-11-02"
         },
         {
           "id": "company-logo",
@@ -444,19 +482,26 @@
           "qualifier": "268 x 268 min",
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "company-cover",
           "label": "Cover Image",
           "group": "LinkedIn Company / Career pages",
-          "render": "4200 x 700",
-          "width": 4200,
-          "height": 700,
-          "aspect": "6:1",
+          "render": "1512 x 256",
+          "width": 1512,
+          "height": 256,
+          "min": {
+            "width": 1512,
+            "height": 256
+          },
+          "qualifier": "LinkedIn lists 1512 x 256 as both minimum and recommended",
+          "notes": [
+            "Was 4200 x 700 (verified 2026-07-24). As of 2026-11-02 answer a563309 lists \"Page Cover image 1512 (w) x 256 (h) pixels\" for both minimum and recommended."
+          ],
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "life-tab-main",
@@ -468,7 +513,7 @@
           "aspect": "3:1",
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "life-tab-modules",
@@ -479,7 +524,7 @@
           "height": 282,
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "life-tab-photos",
@@ -496,7 +541,7 @@
           "qualifier": "264 x 176 min",
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "company-post-image",
@@ -520,7 +565,7 @@
           ],
           "published": true,
           "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -549,13 +594,13 @@
           "qualifier": "15MB max; upload 800 x 800 so it stays sharp everywhere",
           "published": true,
           "source_url": "https://support.google.com/youtube/answer/10456525",
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "alternate",
               "width": 800,
               "height": 800,
-              "description": "recommended upload size"
+              "description": "practical upload size; YouTube states only the 98 x 98 render"
             }
           ]
         },
@@ -574,7 +619,7 @@
           "qualifier": "16:9 ratio; 2560 x 1440 recommended for TV; safe area 1235 x 338; 6MB max",
           "published": true,
           "source_url": "https://support.google.com/youtube/answer/10456525",
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "safe-area",
@@ -597,7 +642,6 @@
           "max_bytes": 52428800,
           "formats": [
             "jpg",
-            "gif",
             "png"
           ],
           "qualifier": "16:9, 640 px min width; 2MB max on mobile, 50MB on desktop",
@@ -606,7 +650,7 @@
           ],
           "published": true,
           "source_url": "https://support.google.com/youtube/answer/72431",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "shorts",
@@ -634,7 +678,7 @@
           "qualifier": "square, under 1MB",
           "published": true,
           "source_url": "https://support.google.com/youtube/answer/10456525",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -664,7 +708,7 @@
           "qualifier": "upload 400 x 400 or larger square; displays as circle",
           "published": true,
           "source_url": "https://www.tiktok.com/support/faq_detail?id=7581821549855038008",
-          "verified": "2026-08-03",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "alternate",
@@ -717,11 +761,11 @@
         },
         {
           "title": "AT Protocol lexicon - app.bsky.embed.external (link card)",
-          "url": "https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/external.json"
+          "url": "https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json"
         },
         {
           "title": "AT Protocol lexicon - app.bsky.embed.images (post images)",
-          "url": "https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/images.json"
+          "url": "https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/images.json"
         }
       ],
       "assets": [
@@ -827,7 +871,7 @@
           "qualifier": "max 2MB; WEBP/PNG/GIF/JPG",
           "published": true,
           "source_url": "https://docs.joinmastodon.org/user/profile/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "header",
@@ -846,7 +890,7 @@
           "qualifier": "max 2MB",
           "published": true,
           "source_url": "https://docs.joinmastodon.org/user/profile/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -873,7 +917,7 @@
           "aspect": "1:1",
           "published": true,
           "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484265952660-Community-icon",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "banner-desktop",
@@ -885,7 +929,7 @@
           },
           "published": true,
           "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "banner-mobile",
@@ -897,7 +941,7 @@
           },
           "published": true,
           "source_url": "https://support.reddithelp.com/hc/en-us/articles/15484339588884-Banner",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -962,13 +1006,16 @@
           ],
           "qualifier": "2:3 ratio; larger ratios get cut off in feed",
           "detail": [
-            "title: 100 char max — text box: 250 char max — description: up to 800 char (first 50–60 show in feed)",
+            "title: 100 char max - text box: 250 char max - description: up to 800 char",
             "safe zones: 270 px top, 65 px left, 195 px right, 790 px bottom",
             "file: BMP / JPEG / PNG / TIFF / WEBP, 20MB max on web"
           ],
           "published": true,
-          "source_url": "https://help.pinterest.com/en/article/review-pin-specs",
-          "verified": "2026-07-24"
+          "source_url": "https://business.pinterest.com/creative-best-practices/",
+          "verified": "2026-11-02",
+          "notes": [
+            "Dimensions and ratio from business.pinterest.com/creative-best-practices; safe zones, character limits, file types and 20MB cap from help.pinterest.com/en/article/review-pin-specs, which no longer states an image size."
+          ]
         },
         {
           "id": "video-pin",
@@ -980,7 +1027,7 @@
           "qualifier": "9:16 ratio; 4 seconds to 5 minutes, H.264 or H.265",
           "published": true,
           "source_url": "https://help.pinterest.com/en/article/review-pin-specs",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "board-cover",
@@ -1020,7 +1067,7 @@
           "qualifier": "max 10MB; JPEG / PNG / WEBP — GIFs go static",
           "published": true,
           "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "header",
@@ -1033,7 +1080,7 @@
           "qualifier": "16:9, max 10MB",
           "published": true,
           "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "post-image",
@@ -1053,7 +1100,7 @@
           ],
           "published": true,
           "source_url": "https://help.tumblr.com/knowledge-base/image-gif-troubleshooting/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1088,7 +1135,7 @@
           ],
           "published": true,
           "source_url": "https://help.medium.com/hc/en-us/articles/215679797-Using-images",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1135,7 +1182,7 @@
           "qualifier": "640 x 320 min, under 1MB",
           "published": true,
           "source_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1195,7 +1242,7 @@
           "qualifier": "scales to browser width; images are scaled to 480 high, so keep the artwork weighted left",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-08-03",
+          "verified": "2026-11-02",
           "notes": [
             "The 3MB cap previously recorded here is not stated in the article and was dropped 2026-08-03. The article gives the dimension only: \"The recommended size for a profile banner is 1200x480px.\""
           ]
@@ -1211,7 +1258,7 @@
           "qualifier": "under 2.9MB; larger images are resized to these maximums automatically",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/channel-page-setup",
-          "verified": "2026-08-03"
+          "verified": "2026-11-02"
         },
         {
           "id": "offline-banner",
@@ -1293,7 +1340,7 @@
           "qualifier": "PNG, ≤25KB each",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/subscriber-badge-guide",
-          "verified": "2026-08-03"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1324,7 +1371,7 @@
           "qualifier": "max 2MB, .jpg or .png",
           "published": true,
           "source_url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "track-artwork",
@@ -1349,7 +1396,7 @@
           "qualifier": "max 2MB — below 1240 x 260 the zoom control is disabled",
           "published": true,
           "source_url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header",
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "minimum-for-feature",
@@ -1380,7 +1427,7 @@
           "height": 180,
           "published": true,
           "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "logo",
@@ -1391,7 +1438,7 @@
           "aspect": "1:1",
           "published": true,
           "source_url": "https://help.nextdoor.com/s/article/How-to-add-a-banner-or-logo?language=en_US",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1430,7 +1477,7 @@
           "qualifier": "250 x 250 min, 10KB–5MB, JPG or PNG",
           "published": true,
           "source_url": "https://support.google.com/business/answer/6103862",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "cover-photo",
@@ -1469,7 +1516,7 @@
           "qualifier": "PNG / JPG / GIF, non-animated; renders across Gmail, Calendar, Drive",
           "published": true,
           "source_url": "https://knowledge.workspace.google.com/admin/getting-started/add-your-logo-to-google-workspace",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1488,6 +1535,10 @@
         {
           "title": "wordpress.org — customizer (site icon)",
           "url": "https://wordpress.org/documentation/article/customizer/"
+        },
+        {
+          "title": "make.wordpress.org - theme review required items (screenshot size cap)",
+          "url": "https://make.wordpress.org/themes/handbook/review/required/"
         }
       ],
       "assets": [
@@ -1502,7 +1553,7 @@
           "aspect": "1:1",
           "published": true,
           "source_url": "https://wordpress.org/documentation/article/customizer/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "theme-screenshot",
@@ -1522,7 +1573,10 @@
           "qualifier": "`screenshot.png` or `.jpg` in theme root; must not exceed 1200 x 900",
           "published": true,
           "source_url": "https://developer.wordpress.org/themes/core-concepts/theme-structure/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "notes": [
+            "The 1200 x 900 cap (\"must not be bigger than 1200 x 900px\") is stated in the theme review handbook: https://make.wordpress.org/themes/handbook/review/required/"
+          ]
         },
         {
           "id": "plugin-icons",
@@ -1539,11 +1593,18 @@
             }
           ],
           "formats": [
-            "png"
+            "png",
+            "jpg",
+            "gif",
+            "svg"
           ],
           "published": true,
           "source_url": "https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "detail": [
+            "SVG icons also need a PNG fallback; 1MB max per icon"
+          ],
+          "max_bytes": 1048576
         },
         {
           "id": "plugin-banners",
@@ -1568,7 +1629,7 @@
           ],
           "published": true,
           "source_url": "https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/",
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     }

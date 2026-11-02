@@ -4,7 +4,7 @@ An always up-to-date quick reference for social media image and video dimensions
 
 [Contributing]: https://github.com/chuckreynolds/social-profile-image-sizes/blob/master/CONTRIBUTING.md
 
-_Last verified: 2026-10-06_
+_Last verified: 2026-11-02_
 
 _Values marked **[unpublished]** are not stated in any first-party doc — they're community/observed conventions. Everything else is quoted from the linked source._
 
@@ -61,7 +61,7 @@ Schema: [`data/schema.json`](data/schema.json). Contributing or automating again
 - [WordPress Plugin & Theme Dev](#wordpress-plugin--theme-dev)
 
 ## X (formerly Twitter)
-* Profile Photo - 400 x 400 (max 2MB; JPEG / GIF / PNG, no animated GIFs)
+* Profile Photo - 400 x 400 (max 2MB; JPEG / GIF / PNG)
 * Header Image - 1500 x 500 (~60 px top and bottom can crop depending on monitor/browser)
 * Post Image - 1024 x 512 **[unpublished]** (displays inline as 506 x 253; 1200 x 675 also common for landscape)
 * Article Image - 5:2 ratio, e.g. 1000 x 400 **[unpublished]**
@@ -73,14 +73,14 @@ _Note: X retired its Cards documentation when developer.x.com moved to docs.x.co
 Source: [help.x.com — uploading profile photos and headers and best sizes](https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo)
 
 ## Facebook
-* Profile Photo - 320 x 320 **[unpublished]** (displays as a circle; Facebook no longer states a size)
+* Profile Photo - 320 x 320 (cropped to a circle; displays at 176 x 176 on computers, 196 x 196 on smartphones)
 * Cover Photo - 851 x 315 optimal (400 x 150 min; sRGB JPG under 100KB recommended)
   * _Crops to 16:9 on desktop and 2.4:1 on mobile — keep key content centered_
 * Post Link Image (Open Graph) - 1200 x 630 (1.91:1; 600 x 315 min for the large render, 200 x 200 absolute min, 8MB max)
 * Event Image - 1200 x 628 **[unpublished]**
 * App Icon - 1024 x 1024 **[unpublished]** (PNG, for Facebook Login app config)
 
-Sources: [facebook.com/help — cover photo](https://www.facebook.com/help/125379114252045), [developers.facebook.com — sharing best practices](https://developers.facebook.com/docs/sharing/webmasters/images)
+Sources: [facebook.com/help - Page profile picture and cover photo dimensions](https://www.facebook.com/help/125379114252045), [developers.facebook.com — sharing best practices](https://developers.facebook.com/documentation/sharing/webmasters/images)
 
 ## Instagram
 * Profile Photo - 320 x 320 **[unpublished]** (displays as circle)
@@ -88,6 +88,7 @@ Sources: [facebook.com/help — cover photo](https://www.facebook.com/help/12537
   * _Supported aspect range is 1.91:1 to 3:4 — i.e. 1080 x 566 (landscape) through 1080 x 1440 (max portrait)_
   * _1080 x 1350 (4:5) and 1080 x 1080 (1:1) are the common picks; anything outside the range gets cropped_
 * Stories & Reels - 9:16, min 720 px resolution, min 30 FPS (1080 x 1920 standard)
+  * _Instagram accepts reels from 1.91:1 to 9:16; 9:16 fills the screen_
 * Reel Cover Photo - 420 x 654 (1:1.55 — can't be changed after upload)
 * Reel Safe Zone - 1080 x 1420 **[unpublished]** (top/bottom ~250 px overlaid by UI)
 
@@ -103,22 +104,22 @@ Sources: [help.instagram.com — image resolution](https://help.instagram.com/16
 _Note: Meta hasn't published first-party Threads media specs, so every value below is unpublished — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior._
 
 ## LinkedIn
-* Profile Photo - 400 x 400 (268 x 268 min)
-* Profile Background - 1584 x 396
+* Profile Photo - at least 400 x 400 (up to 7680 x 4320, 8MB max; PNG or JPG, no GIFs)
+* Profile Background - 1584 x 396 (JPG or PNG, under 8MB)
 * Link Preview (Open Graph og:image) - at least 1200 x 627 (1.91:1 recommended, 5MB max)
   * _Images less than 401 px wide display as a thumbnail_
   * _No file types are published for the sharing module_
 
   **LinkedIn Company / Career pages**
   * Logo - 400 x 400 (268 x 268 min)
-  * Cover Image - 4200 x 700
+  * Cover Image - 1512 x 256 (LinkedIn lists 1512 x 256 as both minimum and recommended)
   * Life Tab Main Image - 1128 x 376
   * Life Tab Custom Modules - 502 x 282
   * Life Tab Company Photos - 900 x 600 (264 x 176 min)
   * Company Post Images (with link) - 1200 x 627 (1.91:1, 200 px min width)
     * _All page images: PNG or JPEG, 3MB max — LinkedIn recommends a high-res JPEG over PNG_
 
-Sources: [linkedin.com/help — profile background](https://www.linkedin.com/help/linkedin/answer/a568217), [company & career pages](https://www.linkedin.com/help/linkedin/answer/a563309), [make your website shareable (link previews)](https://www.linkedin.com/help/linkedin/answer/46687)
+Sources: [linkedin.com/help — profile background](https://www.linkedin.com/help/linkedin/answer/a568217), [company & career pages](https://www.linkedin.com/help/linkedin/answer/a563309), [make your website shareable (link previews)](https://www.linkedin.com/help/linkedin/answer/a521928/), [linkedin.com/help - photo won't upload to your profile (profile photo limits)](https://www.linkedin.com/help/linkedin/answer/a549049/)
 
 ## YouTube
 * Profile Picture - displays at 98 x 98 (15MB max; upload 800 x 800 so it stays sharp everywhere)
@@ -150,7 +151,7 @@ Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/
 
 _Note: Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both._
 
-Sources: [bsky.app](https://bsky.app/), [AT Protocol lexicon - app.bsky.embed.external (link card)](https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/external.json), [AT Protocol lexicon - app.bsky.embed.images (post images)](https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/embed/images.json)
+Sources: [bsky.app](https://bsky.app/), [AT Protocol lexicon - app.bsky.embed.external (link card)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json), [AT Protocol lexicon - app.bsky.embed.images (post images)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/images.json)
 
 ## Mastodon
 * Avatar - downscales to 400 x 400 (max 2MB; WEBP/PNG/GIF/JPG)
@@ -171,7 +172,7 @@ Sources: [support.reddithelp.com — community icon](https://support.reddithelp.
 * Profile Photo - upload 400 x 400 **[unpublished]** (displays as 165 x 165 circle)
 * Profile Cover - 1920 x 1080 **[unpublished]** (16:9; image or video)
 * Standard Pin - 1000 x 1500 (2:3 ratio; larger ratios get cut off in feed)
-  * _title: 100 char max — text box: 250 char max — description: up to 800 char (first 50–60 show in feed)_
+  * _title: 100 char max - text box: 250 char max - description: up to 800 char_
   * _safe zones: 270 px top, 65 px left, 195 px right, 790 px bottom_
   * _file: BMP / JPEG / PNG / TIFF / WEBP, 20MB max on web_
 * Video Pin - 1080 x 1920 (9:16 ratio; 4 seconds to 5 minutes, H.264 or H.265)
@@ -248,10 +249,11 @@ Source: [knowledge.workspace.google.com — add your logo to Google Workspace](h
 * Site Icon (Customizer → Site Identity → Site Icon) - square, at least 512 x 512
 * Theme Screenshot - 1200 x 900 (`screenshot.png` or `.jpg` in theme root; must not exceed 1200 x 900)
 * Plugin Icons - 256 x 256, and 128 x 128
+  * _SVG icons also need a PNG fallback; 1MB max per icon_
 * Plugin Header Banners - 1544 x 500, and 772 x 250
   * _Plugin images go in an `/assets/` directory: `banner-1544x500.png`, `banner-772x250.png`, `icon-128x128.png`, `icon-256x256.png`_
 
-Sources: [developer.wordpress.org — plugin assets](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/), [theme structure (screenshot)](https://developer.wordpress.org/themes/core-concepts/theme-structure/), [wordpress.org — customizer (site icon)](https://wordpress.org/documentation/article/customizer/)
+Sources: [developer.wordpress.org — plugin assets](https://developer.wordpress.org/plugins/wordpress-org/plugin-assets/), [theme structure (screenshot)](https://developer.wordpress.org/themes/core-concepts/theme-structure/), [wordpress.org — customizer (site icon)](https://wordpress.org/documentation/article/customizer/), [make.wordpress.org - theme review required items (screenshot size cap)](https://make.wordpress.org/themes/handbook/review/required/)
 
 <!-- END GENERATED -->
 ---
