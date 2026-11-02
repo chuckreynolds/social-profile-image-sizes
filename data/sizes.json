@@ -20,6 +20,10 @@
         {
           "title": "help.x.com — uploading profile photos and headers and best sizes",
           "url": "https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo"
+        },
+        {
+          "title": "help.x.com - how to post photos or GIFs",
+          "url": "https://help.x.com/en/using-x/posting-gifs-and-pictures"
         }
       ],
       "assets": [
@@ -62,7 +66,7 @@
           "aspect": "2:1",
           "qualifier": "displays inline as 506 x 253; 1200 x 675 also common for landscape",
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "display",
@@ -76,6 +80,9 @@
               "height": 675,
               "description": "common landscape choice"
             }
+          ],
+          "detail": [
+            "X shows a single photo uncropped when its aspect ratio is between 2:1 and 3:4 (help.x.com, how to post photos or GIFs). No pixel size is stated."
           ]
         },
         {
@@ -86,7 +93,7 @@
           "height": 400,
           "aspect": "5:2",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "card-summary",
@@ -103,7 +110,7 @@
           },
           "qualifier": "144 x 144 min, 4096 x 4096 max",
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "notes": [
             "Last published by developer.x.com before the docs.x.com migration removed the Cards section."
           ]
@@ -123,7 +130,7 @@
           },
           "qualifier": "300 x 157 min, 4096 x 4096 max",
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "notes": [
             "Last published by developer.x.com before the docs.x.com migration removed the Cards section."
           ]
@@ -141,6 +148,10 @@
         {
           "title": "developers.facebook.com — sharing best practices",
           "url": "https://developers.facebook.com/documentation/sharing/webmasters/images"
+        },
+        {
+          "title": "developers.facebook.com - App Review submission guide (app icon)",
+          "url": "https://developers.facebook.com/documentation/resp-plat-initiatives/individual-processes/app-review/submission-guide"
         }
       ],
       "assets": [
@@ -225,7 +236,7 @@
           "height": 628,
           "aspect": "1.91:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "app-icon",
@@ -234,15 +245,27 @@
           "width": 1024,
           "height": 1024,
           "aspect": "1:1",
+          "min": {
+            "width": 512,
+            "height": 512
+          },
+          "max": {
+            "width": 1024,
+            "height": 1024
+          },
+          "max_bytes": 5242880,
           "formats": [
+            "jpeg",
+            "gif",
             "png"
           ],
-          "qualifier": "PNG, for Facebook Login app config",
-          "published": false,
-          "verified": "2026-07-24",
+          "qualifier": "512 x 512 to 1024 x 1024 accepted, under 5MB; JPEG / GIF / PNG",
           "notes": [
-            "Required by the app dashboard UI, but not stated in a fetchable public doc."
-          ]
+            "1024 x 1024 from the App Review submission guide (\"Upload a 1024x1024 compliant app icon\"). The 512-1024 range, 5MB cap and formats are stated in the Pages API create-an-app doc: https://developers.facebook.com/documentation/pages-api/create-an-app"
+          ],
+          "published": true,
+          "source_url": "https://developers.facebook.com/documentation/resp-plat-initiatives/individual-processes/app-review/submission-guide",
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -269,7 +292,7 @@
           "aspect": "1:1",
           "qualifier": "displays as circle",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "feed-post",
@@ -320,15 +343,20 @@
           "height": 1420,
           "qualifier": "top/bottom ~250 px overlaid by UI",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
     {
       "id": "threads",
       "name": "Threads",
-      "note": "Meta hasn't published first-party Threads media specs, so every value below is unpublished — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior.",
-      "sources": [],
+      "note": "The only first-party Threads media spec is the Threads API publishing doc: images 320 to 1440 px wide, up to 10:1, 8MB, JPEG/PNG; video max 1920 px wide, 9:16 recommended, 1GB, 5 minutes; carousels of 2 to 20 items. Pixel sizes below that the doc does not state are unpublished conventions.",
+      "sources": [
+        {
+          "title": "developers.facebook.com - Threads API posts (media specifications)",
+          "url": "https://developers.facebook.com/documentation/threads/posts"
+        }
+      ],
       "assets": [
         {
           "id": "profile-picture",
@@ -339,7 +367,7 @@
           "aspect": "1:1",
           "qualifier": "1:1, syncs from Instagram",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         },
         {
           "id": "post-image",
@@ -350,16 +378,27 @@
           "aspect": "4:5",
           "qualifier": "4:5 portrait recommended; also 1:1 and 1.91:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 8388608,
+          "formats": [
+            "jpeg",
+            "png"
+          ],
+          "detail": [
+            "Threads API: 320 to 1440 px wide (scaled to fit), aspect up to 10:1, 8MB max, JPEG or PNG, converted to sRGB"
+          ]
         },
         {
           "id": "carousel",
           "label": "Carousel",
-          "render": "up to 10 images",
-          "width": 1080,
-          "qualifier": "≥1080 px wide each",
-          "published": false,
-          "verified": "2026-07-24"
+          "render": "2 to 20 images or videos",
+          "qualifier": "images and videos can be mixed",
+          "published": true,
+          "source_url": "https://developers.facebook.com/documentation/threads/posts",
+          "notes": [
+            "Was \"up to 10 images, 1080 px wide each\" (unpublished). The Threads API doc states carousels \"must have at least 2 and no more than 20 total images, videos, or a mix of the two\"; it gives no per-item size beyond the image and video specs."
+          ],
+          "verified": "2026-11-02"
         },
         {
           "id": "video",
@@ -369,7 +408,11 @@
           "height": 1920,
           "aspect": "9:16",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 1073741824,
+          "detail": [
+            "Threads API: 9:16 recommended, max 1920 px wide, 23 to 60 FPS, up to 5 minutes, 1GB max, MOV or MP4"
+          ]
         },
         {
           "id": "link-preview",
@@ -379,7 +422,7 @@
           "height": 600,
           "aspect": "2:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -660,9 +703,9 @@
           "height": 1920,
           "aspect": "9:16",
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "notes": [
-            "YouTube documents Shorts as vertical but publishes no pixel dimension."
+            "YouTube documents Shorts as vertical with a maximum upload resolution of 1080p (answer 10059070) but publishes no pixel dimension."
           ]
         },
         {
@@ -693,6 +736,10 @@
         {
           "title": "ads.tiktok.com — in-feed ad video specifications",
           "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads"
+        },
+        {
+          "title": "developers.tiktok.com - Content Posting API media transfer guide",
+          "url": "https://developers.tiktok.com/docs/en/content-posting-api-media-transfer-guide"
         }
       ],
       "assets": [
@@ -746,14 +793,25 @@
           "aspect": "9:16",
           "qualifier": "up to 35 photos per post",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 20971520,
+          "formats": [
+            "jpeg",
+            "webp"
+          ],
+          "detail": [
+            "Content Posting API: JPEG or WebP, maximum 1080p, 20MB per image, up to 35 photos per post"
+          ],
+          "notes": [
+            "1080 x 1920 is unpublished. Format, 1080p cap, 20MB and the 35-photo limit come from developers.tiktok.com (media transfer guide and photo post reference)."
+          ]
         }
       ]
     },
     {
       "id": "bluesky",
       "name": "Bluesky",
-      "note": "Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both.",
+      "note": "Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both. Profile avatar and banner are capped at 1,000,000 bytes, PNG or JPEG only.",
       "sources": [
         {
           "title": "bsky.app",
@@ -766,6 +824,10 @@
         {
           "title": "AT Protocol lexicon - app.bsky.embed.images (post images)",
           "url": "https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/images.json"
+        },
+        {
+          "title": "AT Protocol lexicon - app.bsky.actor.profile (avatar and banner)",
+          "url": "https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/actor/profile.json"
         }
       ],
       "assets": [
@@ -777,7 +839,15 @@
           "height": 400,
           "aspect": "1:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 1000000,
+          "formats": [
+            "png",
+            "jpeg"
+          ],
+          "notes": [
+            "Dimensions are unpublished. max_bytes and formats come from app.bsky.actor.profile (accept image/png and image/jpeg, maxSize 1000000)."
+          ]
         },
         {
           "id": "banner",
@@ -787,7 +857,15 @@
           "height": 500,
           "aspect": "3:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02",
+          "max_bytes": 1000000,
+          "formats": [
+            "png",
+            "jpeg"
+          ],
+          "notes": [
+            "Dimensions are unpublished. max_bytes and formats come from app.bsky.actor.profile (accept image/png and image/jpeg, maxSize 1000000)."
+          ]
         },
         {
           "id": "post-image",
@@ -956,6 +1034,10 @@
         {
           "title": "help.pinterest.com — pin specs",
           "url": "https://help.pinterest.com/en/article/review-pin-specs"
+        },
+        {
+          "title": "help.pinterest.com - add a profile cover",
+          "url": "https://help.pinterest.com/en/business/article/personalize-your-profile"
         }
       ],
       "assets": [
@@ -968,7 +1050,7 @@
           "aspect": "1:1",
           "qualifier": "displays as 165 x 165 circle",
           "published": false,
-          "verified": "2026-07-24",
+          "verified": "2026-11-02",
           "also": [
             {
               "label": "display",
@@ -981,13 +1063,19 @@
         {
           "id": "profile-cover",
           "label": "Profile Cover",
-          "render": "1920 x 1080",
-          "width": 1920,
-          "height": 1080,
+          "render": "at least 800 x 450",
           "aspect": "16:9",
-          "qualifier": "16:9; image or video",
-          "published": false,
-          "verified": "2026-07-24"
+          "min": {
+            "width": 800,
+            "height": 450
+          },
+          "qualifier": "horizontal 16:9 recommended; business accounts",
+          "published": true,
+          "source_url": "https://help.pinterest.com/en/business/article/personalize-your-profile",
+          "notes": [
+            "Was 1920 x 1080 (unpublished). Pinterest now states \"at least 800 pixels wide x 450 pixels tall\" with a recommended 16:9 ratio."
+          ],
+          "verified": "2026-11-02"
         },
         {
           "id": "standard-pin",
@@ -1037,7 +1125,7 @@
           "height": 600,
           "aspect": "1:1",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },
@@ -1146,21 +1234,37 @@
         {
           "title": "docs.github.com — repository social preview",
           "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview"
+        },
+        {
+          "title": "docs.github.com - profile reference (profile picture)",
+          "url": "https://docs.github.com/en/account-and-profile/reference/profile-reference"
         }
       ],
       "assets": [
         {
           "id": "profile-picture",
-          "label": "Profile (Identicon) Picture",
-          "render": "500 x 500",
+          "label": "Profile Picture",
+          "render": "about 500 x 500",
           "width": 500,
           "height": 500,
           "aspect": "1:1",
-          "published": false,
-          "verified": "2026-07-24",
+          "max": {
+            "width": 3000,
+            "height": 3000
+          },
+          "max_bytes": 1048576,
+          "formats": [
+            "png",
+            "jpg",
+            "gif"
+          ],
+          "qualifier": "under 1MB and smaller than 3000 x 3000; PNG / JPG / GIF",
+          "published": true,
+          "source_url": "https://docs.github.com/en/account-and-profile/reference/profile-reference",
           "notes": [
-            "GitHub publishes no avatar dimension; 500 x 500 is the generated identicon size."
-          ]
+            "Previously unpublished (500 x 500 was the identicon size). GitHub now states: \"we recommend keeping the image at about 500 by 500 pixels.\""
+          ],
+          "verified": "2026-11-02"
         },
         {
           "id": "social-preview",
@@ -1219,7 +1323,7 @@
           "max_bytes": 10485760,
           "qualifier": "max display 256 x 256, 10MB max",
           "published": false,
-          "verified": "2026-08-03",
+          "verified": "2026-11-02",
           "notes": [
             "The channel setup article no longer states any profile picture dimensions. As of 2026-08-03 it says only: \"Must be JPEG, PNG, or GIF and cannot exceed 10MB.\" The 800 x 800 upload and 256 x 256 display figures are long-standing convention that Twitch no longer documents."
           ],
@@ -1269,7 +1373,7 @@
           "aspect": "16:9",
           "qualifier": "16:9; 1280 x 720 also accepted",
           "published": false,
-          "verified": "2026-08-03",
+          "verified": "2026-11-02",
           "notes": [
             "Twitch documents no size for this. The channel setup article's \"Upload a Video Player Banner\" section gives steps only — and as of 2026-08-03 those steps are duplicated from the accent-colour section above it, so the article appears to have lost its banner instructions entirely. 1920 x 1080 remains the sensible upload size; it just cannot be cited."
           ],
@@ -1307,7 +1411,7 @@
           "qualifier": "PNG, under 100KB each in manual mode, or a single 112–4096 px square PNG under 1MB with auto-resize",
           "published": true,
           "source_url": "https://help.twitch.tv/s/article/subscriber-emote-guide",
-          "verified": "2026-08-03",
+          "verified": "2026-11-02",
           "detail": [
             "PNG format and the 112–4096 px auto-resize range come from the Emote Guidelines article; animated emotes are GIF, with a 512KB per-file cap in manual mode."
           ],
@@ -1351,6 +1455,10 @@
         {
           "title": "help.soundcloud.com — update your profile image and header",
           "url": "https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header"
+        },
+        {
+          "title": "help.soundcloud.com - edit and customize your tracks (artwork)",
+          "url": "https://help.soundcloud.com/hc/en-us/articles/46022345620123-Edit-and-customize-your-tracks"
         }
       ],
       "assets": [
@@ -1376,13 +1484,24 @@
         {
           "id": "track-artwork",
           "label": "Track Artwork",
-          "render": "1400 x 1400",
-          "width": 1400,
-          "height": 1400,
+          "render": "at least 800 x 800",
           "aspect": "1:1",
-          "qualifier": "SoundCloud's upload guidance, not in the profile doc",
-          "published": false,
-          "verified": "2026-07-24"
+          "min": {
+            "width": 800,
+            "height": 800
+          },
+          "max_bytes": 2097152,
+          "formats": [
+            "jpg",
+            "png"
+          ],
+          "qualifier": "under 2MB; .jpg or .png",
+          "published": true,
+          "source_url": "https://help.soundcloud.com/hc/en-us/articles/46022345620123-Edit-and-customize-your-tracks",
+          "notes": [
+            "Was 1400 x 1400 (unpublished). SoundCloud now states: \"Upload a .jpg or .png (at least 800 x 800 pixels) under 2MB.\""
+          ],
+          "verified": "2026-11-02"
         },
         {
           "id": "header",
@@ -1488,7 +1607,7 @@
           "aspect": "16:9",
           "qualifier": "16:9 — Google applies one spec to every photo type",
           "published": false,
-          "verified": "2026-07-24"
+          "verified": "2026-11-02"
         }
       ]
     },

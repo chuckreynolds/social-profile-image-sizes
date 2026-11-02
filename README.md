@@ -64,13 +64,14 @@ Schema: [`data/schema.json`](data/schema.json). Contributing or automating again
 * Profile Photo - 400 x 400 (max 2MB; JPEG / GIF / PNG)
 * Header Image - 1500 x 500 (~60 px top and bottom can crop depending on monitor/browser)
 * Post Image - 1024 x 512 **[unpublished]** (displays inline as 506 x 253; 1200 x 675 also common for landscape)
+  * _X shows a single photo uncropped when its aspect ratio is between 2:1 and 3:4 (help.x.com, how to post photos or GIFs). No pixel size is stated._
 * Article Image - 5:2 ratio, e.g. 1000 x 400 **[unpublished]**
 * Card `twitter:card = summary` - 1:1 **[unpublished]** (144 x 144 min, 4096 x 4096 max)
 * Card `twitter:card = summary_large_image` - 2:1 ratio **[unpublished]** (300 x 157 min, 4096 x 4096 max)
 
 _Note: X retired its Cards documentation when developer.x.com moved to docs.x.com — the old deep links now redirect to a generic overview and no replacement spec page exists. The card values below are the last officially published figures and can no longer be confirmed first-party._
 
-Source: [help.x.com — uploading profile photos and headers and best sizes](https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo)
+Sources: [help.x.com — uploading profile photos and headers and best sizes](https://help.x.com/en/managing-your-account/common-issues-when-uploading-profile-photo), [help.x.com - how to post photos or GIFs](https://help.x.com/en/using-x/posting-gifs-and-pictures)
 
 ## Facebook
 * Profile Photo - 320 x 320 (cropped to a circle; displays at 176 x 176 on computers, 196 x 196 on smartphones)
@@ -78,9 +79,9 @@ Source: [help.x.com — uploading profile photos and headers and best sizes](htt
   * _Crops to 16:9 on desktop and 2.4:1 on mobile — keep key content centered_
 * Post Link Image (Open Graph) - 1200 x 630 (1.91:1; 600 x 315 min for the large render, 200 x 200 absolute min, 8MB max)
 * Event Image - 1200 x 628 **[unpublished]**
-* App Icon - 1024 x 1024 **[unpublished]** (PNG, for Facebook Login app config)
+* App Icon - 1024 x 1024 (512 x 512 to 1024 x 1024 accepted, under 5MB; JPEG / GIF / PNG)
 
-Sources: [facebook.com/help - Page profile picture and cover photo dimensions](https://www.facebook.com/help/125379114252045), [developers.facebook.com — sharing best practices](https://developers.facebook.com/documentation/sharing/webmasters/images)
+Sources: [facebook.com/help - Page profile picture and cover photo dimensions](https://www.facebook.com/help/125379114252045), [developers.facebook.com — sharing best practices](https://developers.facebook.com/documentation/sharing/webmasters/images), [developers.facebook.com - App Review submission guide (app icon)](https://developers.facebook.com/documentation/resp-plat-initiatives/individual-processes/app-review/submission-guide)
 
 ## Instagram
 * Profile Photo - 320 x 320 **[unpublished]** (displays as circle)
@@ -97,11 +98,15 @@ Sources: [help.instagram.com — image resolution](https://help.instagram.com/16
 ## Threads
 * Profile Picture - 320 x 320 **[unpublished]** (1:1, syncs from Instagram)
 * Post Image - 1080 x 1350 **[unpublished]** (4:5 portrait recommended; also 1:1 and 1.91:1)
-* Carousel - up to 10 images **[unpublished]** (≥1080 px wide each)
+  * _Threads API: 320 to 1440 px wide (scaled to fit), aspect up to 10:1, 8MB max, JPEG or PNG, converted to sRGB_
+* Carousel - 2 to 20 images or videos (images and videos can be mixed)
 * Video - 1080 x 1920 **[unpublished]**
+  * _Threads API: 9:16 recommended, max 1920 px wide, 23 to 60 FPS, up to 5 minutes, 1GB max, MOV or MP4_
 * Link Preview - 1200 x 600 **[unpublished]**
 
-_Note: Meta hasn't published first-party Threads media specs, so every value below is unpublished — derived from Instagram parity (Threads runs on IG infrastructure) and observed app behavior._
+_Note: The only first-party Threads media spec is the Threads API publishing doc: images 320 to 1440 px wide, up to 10:1, 8MB, JPEG/PNG; video max 1920 px wide, 9:16 recommended, 1GB, 5 minutes; carousels of 2 to 20 items. Pixel sizes below that the doc does not state are unpublished conventions._
+
+Source: [developers.facebook.com - Threads API posts (media specifications)](https://developers.facebook.com/documentation/threads/posts)
 
 ## LinkedIn
 * Profile Photo - at least 400 x 400 (up to 7680 x 4320, 8MB max; PNG or JPG, no GIFs)
@@ -136,8 +141,9 @@ Sources: [support.google.com/youtube — manage your channel branding](https://s
 * Video Feed - 9:16 recommended, 540 x 960 min (per TikTok's ad specs; 1080 x 1920 is the practical standard)
   * _Also accepted: 16:9 (960 x 540 min) and 1:1 (640 x 640 min)_
 * Photo Mode Posts - 1080 x 1920 **[unpublished]** (up to 35 photos per post)
+  * _Content Posting API: JPEG or WebP, maximum 1080p, 20MB per image, up to 35 photos per post_
 
-Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/faq_detail?id=7581821549855038008), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads)
+Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/faq_detail?id=7581821549855038008), [ads.tiktok.com — in-feed ad video specifications](https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads), [developers.tiktok.com - Content Posting API media transfer guide](https://developers.tiktok.com/docs/en/content-posting-api-media-transfer-guide)
 
 ## Bluesky
 * Profile Picture - 400 x 400 **[unpublished]**
@@ -149,9 +155,9 @@ Sources: [tiktok.com — adding a profile photo](https://www.tiktok.com/support/
 * Portrait Link Preview - 627 x 1200 **[unpublished]**
   * _Thumbnail: any image type, 1,000,000 bytes max (AT Protocol lexicon)_
 
-_Note: Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both._
+_Note: Bluesky publishes no size doc, so the dimensions above are unpublished and derived from the app. The file limits are first-party: the AT Protocol lexicon caps post images at 2,000,000 bytes and the link-card thumbnail at 1,000,000 bytes, and accepts any image type for both. Profile avatar and banner are capped at 1,000,000 bytes, PNG or JPEG only._
 
-Sources: [bsky.app](https://bsky.app/), [AT Protocol lexicon - app.bsky.embed.external (link card)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json), [AT Protocol lexicon - app.bsky.embed.images (post images)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/images.json)
+Sources: [bsky.app](https://bsky.app/), [AT Protocol lexicon - app.bsky.embed.external (link card)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/external.json), [AT Protocol lexicon - app.bsky.embed.images (post images)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/embed/images.json), [AT Protocol lexicon - app.bsky.actor.profile (avatar and banner)](https://github.com/bluesky-social/atproto/blob/main/packages/api/lexicons/app/bsky/actor/profile.json)
 
 ## Mastodon
 * Avatar - downscales to 400 x 400 (max 2MB; WEBP/PNG/GIF/JPG)
@@ -170,7 +176,7 @@ Sources: [support.reddithelp.com — community icon](https://support.reddithelp.
 
 ## Pinterest
 * Profile Photo - upload 400 x 400 **[unpublished]** (displays as 165 x 165 circle)
-* Profile Cover - 1920 x 1080 **[unpublished]** (16:9; image or video)
+* Profile Cover - at least 800 x 450 (horizontal 16:9 recommended; business accounts)
 * Standard Pin - 1000 x 1500 (2:3 ratio; larger ratios get cut off in feed)
   * _title: 100 char max - text box: 250 char max - description: up to 800 char_
   * _safe zones: 270 px top, 65 px left, 195 px right, 790 px bottom_
@@ -178,7 +184,7 @@ Sources: [support.reddithelp.com — community icon](https://support.reddithelp.
 * Video Pin - 1080 x 1920 (9:16 ratio; 4 seconds to 5 minutes, H.264 or H.265)
 * Board Cover - 600 x 600 **[unpublished]**
 
-Sources: [business.pinterest.com — creative best practices](https://business.pinterest.com/creative-best-practices/), [help.pinterest.com — pin specs](https://help.pinterest.com/en/article/review-pin-specs)
+Sources: [business.pinterest.com — creative best practices](https://business.pinterest.com/creative-best-practices/), [help.pinterest.com — pin specs](https://help.pinterest.com/en/article/review-pin-specs), [help.pinterest.com - add a profile cover](https://help.pinterest.com/en/business/article/personalize-your-profile)
 
 ## Tumblr
 * Avatar - 128 x 128 (max 10MB; JPEG / PNG / WEBP — GIFs go static)
@@ -197,10 +203,10 @@ _Note: Medium has no published spec for profile or post-cover dimensions; the pl
 Source: [help.medium.com — using images](https://help.medium.com/hc/en-us/articles/215679797-Using-images)
 
 ## GitHub
-* Profile (Identicon) Picture - 500 x 500 **[unpublished]**
+* Profile Picture - about 500 x 500 (under 1MB and smaller than 3000 x 3000; PNG / JPG / GIF)
 * Repo Social Preview Image - 1280 x 640 (640 x 320 min, under 1MB)
 
-Source: [docs.github.com — repository social preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
+Sources: [docs.github.com — repository social preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview), [docs.github.com - profile reference (profile picture)](https://docs.github.com/en/account-and-profile/reference/profile-reference)
 
 ## Twitch
 * Profile Picture - upload 800 x 800 **[unpublished]** (max display 256 x 256, 10MB max)
@@ -217,10 +223,10 @@ Sources: [help.twitch.tv — channel page setup](https://help.twitch.tv/s/articl
 
 ## SoundCloud
 * Profile Image - square, at least 800 x 800 (max 2MB, .jpg or .png)
-* Track Artwork - 1400 x 1400 **[unpublished]** (SoundCloud's upload guidance, not in the profile doc)
+* Track Artwork - at least 800 x 800 (under 2MB; .jpg or .png)
 * Profile Header Banner - at least 2480 x 520 (max 2MB — below 1240 x 260 the zoom control is disabled)
 
-Source: [help.soundcloud.com — update your profile image and header](https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header)
+Sources: [help.soundcloud.com — update your profile image and header](https://help.soundcloud.com/hc/en-us/articles/115003450007-Update-Your-Profile-Image-and-Header), [help.soundcloud.com - edit and customize your tracks (artwork)](https://help.soundcloud.com/hc/en-us/articles/46022345620123-Edit-and-customize-your-tracks)
 
 ## Nextdoor
 * Agency / Business Profile Banner - 580 x 180
